@@ -46,7 +46,7 @@ const cityData=[
   name:"Cebu ",
   country:"Phillippines",
   lat:"10.296785",
-  ltn:"123.915569",
+  lng:"123.915569",
   cuisines:[{
     type:"Filipino",
     dish_name:"Lechon",
