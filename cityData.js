@@ -190,6 +190,197 @@ export const cityData=[
             link:"https://www.google.com/maps/search/Xiao+Yang+Sheng+Jian/@30.7568317,113.3448898,5z/data=!3m1!4b1!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
         }]    
   }]
-  }
+  },
+  {
+    name:"Sapporo",
+    country:"Japan",
+    lat:42.852607,
+    lng:141.876321,
+    cuisines:[{
+      type:"Japanese",
+      dish_name:"Soup Curry",
+      course:"Main",
+      photoURL:"images/soupcurry.jpg",
+      description:"A light,spicy soup-like curry filled with tender chicken legs and chunky local vegetables.",
+      recommendations:[{
+        name:"Suage+ Soup Curry",
+        priceRange:"$$",
+        address:"Japan, 〒064-0804 Hokkaido, Sapporo, Chuo Ward, Minami 4 Jonishi, 5 Chome−6-1 都志松ビル ２階",
+        link:"https://www.google.com/maps/place/Suage%2B+Soup+Curry/@43.0557369,141.3512699,17z/data=!4m6!3m5!1s0x5f0b298454c641bf:0x91c019c2cebc6973!8m2!3d43.0557369!4d141.3512699!16s%2Fg%2F1wn_5xkl!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
+  {
+    name:"Tokyo",
+    country:"Japan",
+    lat:35.866008,
+    lng:140.451649,
+    cuisines:[{
+      type:"Japanese",
+      dish_name:"Shoyu Ramen",
+      course:"Main",
+      photoURL:"images/ramen.jpg",
+      description:"Classic Toyko-style noodles served in a savory, clear chicken and soy sause broth.",
+      recommendations:[{
+        name:'Menson Rage',
+        priceRange:"$$",
+        address:"3 Chome-37-22 Shoan, Suginami City, Tokyo 167-0054, Japan",
+        link:"https://www.google.com/maps/place/Menson+Rage/@35.7016677,139.5977724,17.55z/data=!4m6!3m5!1s0x6018ee10024fd423:0x738e33c91c7be7f4!8m2!3d35.7017815!4d139.5991777!16s%2Fg%2F11b75gpv37!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
+  {
+    name:"Fukuoka",
+    country:"Japan",
+    lat:33.699385,
+    lng:130.927454,
+    cuisines:[{
+      type:"Japanese",
+      dish_name:"Hakata Tonkotsu Ramen",
+      course:"Main",
+      photoURL:"images/tonkotsu.jpg",
+      description:"Rich, creamy pork bone broth served with thin, firm noodles",
+      recommendations:[{
+        name:"Hakata Issou Honten",
+        priceRange:"$$",
+        address:"3 Chome-1-6 Hakataekihigashi, Hakata Ward, Fukuoka, 812-0013, Japan",
+        link:"https://www.google.com/maps/place/Hakata+Issou+Honten/@33.589087,130.3961049,14z/data=!3m1!5s0x354191b6148a5d0d:0x749d0c38834c28a4!4m10!1m2!2m1!1shakata+issou+honten!3m6!1s0x354191b614dd0001:0xd021dc83c19d7221!8m2!3d33.586378!4d130.4250999!15sChNoYWthdGEgaXNzb3UgaG9udGVuWhUiE2hha2F0YSBpc3NvdSBob250ZW6SARByYW1lbl9yZXN0YXVyYW504AEA!16s%2Fg%2F12hkbkzwl!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
+  {
+    name:"Seoul",
+    country:"South Korea",
+    lat:37.636116,
+    lng:127.049024,
+    cuisines:[{
+      type:"Korean",
+      dish_name:"Samgyetang",
+      course:"Main",
+      photoURL:"images/samgyetang.jpg",
+      description:" Whole young chicken stuffed with ginseng, garlic, and sticky rice in a rich broth",
+      recommendations:[{
+        name:"Tosokchon Samgyetang",
+        priceRange:"$$",
+        address:"5 Jahamun-ro 5-gil, Jongno District, Seoul, South Korea",
+        link:"https://www.google.com/maps/place/Tosokchon+Samgyetang/@37.5777952,126.9612912,15z/data=!3m1!4b1!4m6!3m5!1s0x357ca2be188e936f:0xe0687c7b0f486f53!8m2!3d37.5777786!4d126.9715909!16s%2Fg%2F1tg6n1tz!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
+  {
+    name:"Busan",
+    country:"South Korea",
+    lat:34.986650,
+    lng:128.843599,
+    cuisines:[{
+      type:"Korean",
+      dish_name:"Dwaeji Gukbap",
+      course:"Main",
+      photoURL:"images/gukbap.jpg",
+      description:"A comforting, milky pork bone broth served with rice, chives, and salted shrimp",
+      recommendations:[{
+        name:"Ssangdung-i Dwaeji Gukbap",
+        priceRange:"$$",
+        address:"35-1 UN pyeonghwa-ro, Nam-gu, Busan, South Korea",
+        link:"https://www.google.com/maps/place/Ssangdung-i+Dwaeji+Gukbap/@35.1317955,129.0819358,15z/data=!3m1!4b1!4m6!3m5!1s0x3568ecf55215cbc3:0x975d8d6b234d9fd5!8m2!3d35.1317784!4d129.0922355!16s%2Fg%2F1tp0bkb3!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]    
+  },
+  {
+    name:"Ulaanbaatar",
+    country:"Mongolia",
+    lat:47.935786,
+    lng:106.876983,
+    cuisines:[{
+      type:"Mongolian",
+      dish_name:"Buuz",
+      course:"Main",
+      photoURL:"images/buuz.jpg",
+      description:" Large, savory steamed dumplings stuffed with minced mutton or beef, garlic, and onions.",
+      recommendations:[{
+        name:"Khaan Buuz",
+        priceRange:"$",
+        address:"Энэбишийн өргөн чөлөө гудамж сентоза үйлчилгээний төв, BGD - 18 khoroo, Ulaanbaatar 16063, Mongolia",
+        link:"https://www.google.com/maps/search/Khaan+Buuz+/@47.9068214,106.7161879,10.53z/data=!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
+  {
+    name:"Penang",
+    country:"Malaysia",
+    lat: 5.244646,
+    lng: 100.527111,
+    cuisines:[{
+      type:"Malaysian",
+      dish_name:'Penang Asam Laksa',
+      course:"Main",
+      photoURL:"images/laksa.jpg",
+      description:"A sour and spicy fish noodle soup made with tamarind, mint, and ginger flower.",
+      recommendations:[{
+        name:"Penang Road Famous Laksa",
+        priceRange:"$",
+        address:"5-7, Lebuh Keng Kwee, George Town, 10100 George Town, Pulau Pinang, Malaysia",
+        link:"https://www.google.com/maps/place/Penang+Road+Famous+Laksa/@5.4166823,100.3208561,15z/data=!3m1!4b1!4m6!3m5!1s0x304ac396ec86d23d:0x3d16f979154f0f62!8m2!3d5.416661!4d100.3311558!16s%2Fg%2F11c1r1h_4w!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
+  {
+    name:"Jakarta",
+    country:"Indoesia",
+    lat:-6.007891,
+    lng: 105.312179,
+    cuisines:[{
+      type:"Indonesian",
+      dish_name:"Nasi Padang",
+      course:"Main",
+      photoURL:"images/nasipadang.jpg",
+      description:"Steamed rice served with a massive spread of rich, spicy West Sumatran dishes.",
+      recommendations:[{
+        name:"Rumah Makan SURYA Masakan Padang",
+        priceRange:"$$",
+        address:"Jl. Bendungan Hilir No.5, RT.10/RW.6, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia",
+        link:"https://www.google.com/maps/place/Rumah+Makan+SURYA+Masakan+Padang/@-6.2143829,106.8144475,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f768bbdafa57:0xa9fe29049e174c48!8m2!3d-6.2143829!4d106.8144475!16s%2Fg%2F1th9k306!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D",
+      }]
+    }]
+  },
+  {
+    name:"Brisbane",
+    country:"Australia",
+    lat:-27.354783,
+    lng:154.980860,
+    cuisines:[{
+      type:"Cantonese",
+      dish_name:"Dim Sum",
+      course:"Brunch",
+      photoURL:"images/dimsum_2.jpg",
+      description:"Famous for five-spice roast duck and authentic yum cha lunch, blending local seafood with traditional Cantonese techniques",
+      recommendations:[{
+        name:"Stanley Restaurant",
+        priceRange:"$$$",
+        address:"5 Boundary St, Brisbane City QLD 4000, Australia",
+        link:"https://www.google.com/maps/place/Stanley+Restaurant/@-27.4623577,153.0348235,17z/data=!4m6!3m5!1s0x6b9159e72ad7edc1:0x426394f740197845!8m2!3d-27.4624719!4d153.0350917!16s%2Fg%2F11j00y2jsq!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D",
+
+      }]
+    }]
+  },
+  {
+    name:"Perth",
+    country:"Australia",
+    lat:-32.114457,
+    lng: 116.652430,
+    cuisines:[{
+      type:"Italian-Australian",
+      dish_name:"The Continental Roll:",
+      course:"Main",
+      photoURL:"images/continental_roll.jpg",
+      description:"Cold-cut sandwich loaded with cured meats, cheese, and pickled vegetables packed into a crusty white roll",
+      recommendations:[{
+        name:"The Re Store",
+        priceRange:"$",
+        address:"72 Lake St, Northbridge WA 6003, Australia",
+        link:"https://www.google.com/maps/place/The+Re+Store/@-31.9397293,115.8552265,14z/data=!4m10!1m2!2m1!1sThe+Re+Store+in+perth!3m6!1s0x2a32bad21e95c321:0x745aff9750f1889e!8m2!3d-31.946375!4d115.8578806!15sChVUaGUgUmUgU3RvcmUgaW4gcGVydGhaFyIVdGhlIHJlIHN0b3JlIGluIHBlcnRokgEVZ291cm1ldF9ncm9jZXJ5X3N0b3Jl4AEA!16s%2Fg%2F1tl6njcg!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]    
+  },
 
 ]
