@@ -39,6 +39,24 @@ export const cityData=[
     }
     ]
   }]
+},{
+    name:"Hanoi",
+    country:"Vietnam",
+    lat:21.201840,
+    lng:106.376063,
+    cuisines:[{
+        type:"Vietnamese",
+        dish_name:"Bún Chả",
+        course:"main",
+        photoURL:"images/buncha.jpg",
+        description:"Smoky char-grilled pork patties and belly slices served in warm, sweet-savory fish sauce with fresh herbs.",
+        recommendations:[{
+            name:"Bún chả Hương Liên",
+            priceRange:"$$",
+            address:"24 P. Lê Văn Hưu, Cửa Nam, Hà Nội, Vietnam",
+            link:"https://www.google.com/maps/place/B%C3%BAn+ch%E1%BA%A3+H%C6%B0%C6%A1ng+Li%C3%AAn/@19.9629105,98.9083715,5.67z/data=!4m6!3m5!1s0x3135abf2a4ba685d:0x7e67963f30fa90e7!8m2!3d21.0181373!4d105.8538926!16s%2Fg%2F1hm5x9fjz!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
 },
 {
   name:"Cebu ",
@@ -58,6 +76,25 @@ export const cityData=[
       link:"https://www.google.com/maps/place/CNT+Lechon+-+SM+Cebu+Across/@10.3097313,123.9176729,13z/data=!4m6!3m5!1s0x33a9996ddc391bfb:0xdbd469bdf299cc16!8m2!3d10.3097778!4d123.9176463!16s%2Fg%2F11hd9r4lnq?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
     }]
   }]
+},
+{
+    name:"Manila",
+    country:"Phillippines",
+    lat:14.582279,
+    lng:121.142096,
+    cuisines:[{
+        type:"Filipino",
+        dish_name:"Sinigang",
+        course:"main",
+        photoURL:"images/sinigang.jpg",
+        description:"Tender beef short ribs in a tangy tamarind broth balanced by the sweet, refreshing taste of fresh watermelon chunks.",
+        recommendations:[{
+            name:"Manam",
+            priceRange:"$$",
+            address:'SM City Manila, 659 4th St, Ermita, Manila, 1000 Metro Manila, Philippines',
+            link:"https://www.google.com/maps/search/Manam/@14.5346084,120.852868,11z/data=!3m1!4b1!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
 },
 {
   name:"Taipei",
@@ -154,4 +191,5 @@ export const cityData=[
         }]    
   }]
   }
+
 ]
