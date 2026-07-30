@@ -79,7 +79,7 @@ export const cityData=[
   }]
 },
 {
-  name:"HongKong",
+  name:"Hong Kong",
   country:"",
   lat:22.303117,
   lng:114.100703,
