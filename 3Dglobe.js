@@ -80,7 +80,45 @@ const cityData=[
       link:"https://www.google.com/maps/place/%E5%A4%A7%E7%A8%BB%E5%9F%95%E9%AD%AF%E8%82%89%E9%A3%AF/@25.0503594,121.5140602,18.06z/data=!4m6!3m5!1s0x3442a96d2ecfd72b:0x21c4c5b2853cd189!8m2!3d25.0509665!4d121.5146457!16s%2Fg%2F11dzsx6s59?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
     }]
   }]
-}
+},
+{
+  name:"HongKong",
+  country:"",
+  lat:22.303117,
+  lng:114.100703,
+  cuisines:[{
+    type:"Cantonese",
+    dish_name:"Dim Sum",
+    course:"brunch",
+    photoURL:"images/dimsum.jpg",
+    description:"A traditional Chinese style of brunch, featuring small, bite-sized dishes served in bamboo steamer baskets or on small plates alongside with hot tea.",
+    recommendations:[{
+      name:"Lin Heung Tea House",
+      priceRange:"$$",
+      address:"Hong Kong, Tsim Sha Tsui, Kimberley Rd, 25號1-2/F",
+      link:"https://www.google.com/maps/place/Lin+Heung+Lau.+TST/data=!4m2!3m1!1s0x0:0x8370d6550569649e?sa=X&ved=1t:2428&ictx=111"
+    }]
+  }]
+  },
+  {
+    name:"Macao",
+    country:"",
+    lat:22.193716,
+    lng:113.538120,
+    cuisines:[{
+      type:"Portuguese and Macanese",
+      dish_name:"Portuguese egg tarts",
+      course:"dessert",
+      photoURL:"images/portuguese.jpg",
+      description:"A pastry featuring a blistered, carmaelized custard filling inside a crisp, flaky pastry shell.",
+      recommendations:[{
+        name:"Lord Stow's Bakery",
+        priceRange:"$",
+        address:"1 Rua do Tassara, Coloane Town Square, Macau",
+        link:"https://www.google.com/maps/place/Lord+Stow's+Bakery+Main+Store/@22.1256567,113.5440593,15.15z/data=!4m10!1m2!2m1!1slord+stow's+bakery!3m6!1s0x34017035b7ea09d9:0x321981ba17a4b09e!8m2!3d22.1183139!4d113.5511155!15sChJsb3JkIHN0b3cncyBiYWtlcnkiA4gBAVoUIhJsb3JkIHN0b3cncyBiYWtlcnmSAQZiYWtlcnmaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTjRhbkJZYWxCM0VBReABAPoBBAgjEEw!16s%2Fg%2F11df0rfff7!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  }
 ]
 
 const globeElement=document.getElementById("globeViz");
@@ -141,9 +179,19 @@ function showCityInfo(city) {
     <button id="city-close" aria-label="Close">✕</button>
     ${cuisine.photoURL ? `<img class="dish-img" src="${cuisine.photoURL}" alt="${cuisine.dish_name}">` : ''}
     <h3>${city.name}, ${city.country}</h3>
-    <div class="dish">${cuisine.dish_name}</div>
-    <div class="cuisine">${cuisine.type} • ${cuisine.course}</div>
+    <div class="field">
+      <span class="label">Dish</span>
+      <span class="value dish">${cuisine.dish_name}</span>
+    </div>
+
+    <div class="field">
+      <span class="label">Cuisine</span>
+      <span class="value">${cuisine.type} · ${cuisine.course}</span>
+    </div>
+
     <div class="desc">${cuisine.description}</div>
+
+    <div class="recs-heading">Where to try it</div>
     ${cuisine.recommendations.map(r => `
       <div class="rec">
         <div><strong>${r.name}</strong><span class="price">${r.priceRange || ''}</span></div>
@@ -152,7 +200,6 @@ function showCityInfo(city) {
       </div>
     `).join('')}
   `;
-
   let coords;
   try{
     coords=myGlobe.getScreenCoords(city.lat, city.lng, 0.02);
