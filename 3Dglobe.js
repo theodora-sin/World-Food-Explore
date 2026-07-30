@@ -186,7 +186,12 @@ function showCityInfo(city) {
 
     <div class="field">
       <span class="label">Cuisine</span>
-      <span class="value">${cuisine.type} · ${cuisine.course}</span>
+      <span class="value">${cuisine.type}</span>
+    </div>
+
+    <div class="field">
+      <span class="label">Meal Type</span>
+      <span class= "value">${cuisine.course}</span>
     </div>
 
     <div class="desc">${cuisine.description}</div>
