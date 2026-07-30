@@ -65,13 +65,13 @@ const cityData=[
 }
 ]
 const globeElement=document.getElementById("globeViz");
-  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-  .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-  .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-  .backgroundColor('#000')
 
 const myGlobe = Globe()
   (document.getElementById('globeViz'))
+  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+  .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+  .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+  .backgroundColor('#000')  
   .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
   .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
   .backgroundColor("rgba(0,0,0,0)")
