@@ -1,4 +1,4 @@
-import Globe from 'globe.gl';
+import Globe from 'https://esm.sh/globe.gl';
 let hoveredCity =null;
 const cityData=[
   {
