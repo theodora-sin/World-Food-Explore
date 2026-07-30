@@ -175,3 +175,6 @@ html,body{
     transform: translate(-50%,-50%) scale(1.06); 
     box-shadow: 0 6px 18px rgba(0,0,0,0.6); 
 }
+.city-label.text{
+    vertical-align:middle;
+}
