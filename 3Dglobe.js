@@ -61,26 +61,42 @@ const cityData=[
       link:"https://www.google.com/maps/place/CNT+Lechon+-+SM+Cebu+Across/@10.3097313,123.9176729,13z/data=!4m6!3m5!1s0x33a9996ddc391bfb:0xdbd469bdf299cc16!8m2!3d10.3097778!4d123.9176463!16s%2Fg%2F11hd9r4lnq?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
     }]
   }]
-
+},
+{
+  name:"Taipei",
+  country:"Taiwan",
+  lat:25.033968,
+  lng:121.568353,
+  cuisines:[{
+    type:"Taiwanese",
+    dish_name:"Lu Rou Fan--魯肉飯",
+    course:"main",
+    photoURL:"images/lurofan.webp",
+    description:"Savory braised pork rice with a layer of rich, gelantinous pork belly over steamed rice.",
+    recommendations:[{
+      name:"Dadaocheng Luroufan--大稻埕魯肉飯",
+      priceRange:"$",
+      address:"No. 17號, Lane 220, Chang'an W Rd, Jianming Village, Datong District, Taipei City, Taiwan 103",
+      link:"https://www.google.com/maps/place/%E5%A4%A7%E7%A8%BB%E5%9F%95%E9%AD%AF%E8%82%89%E9%A3%AF/@25.0503594,121.5140602,18.06z/data=!4m6!3m5!1s0x3442a96d2ecfd72b:0x21c4c5b2853cd189!8m2!3d25.0509665!4d121.5146457!16s%2Fg%2F11dzsx6s59?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D"
+    }]
+  }]
 }
 ]
+
 const globeElement=document.getElementById("globeViz");
 
 const myGlobe = Globe()
   (document.getElementById('globeViz'))
   .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
   .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-  .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-  .backgroundColor('#000')  
-  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-  .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+  .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png') 
   .backgroundColor("rgba(0,0,0,0)")
   .pointsData(cityData)
   .pointLat('lat')
   .pointLng('lng')
   .pointColor(()=> '#ffa500')
-  .pointRadius(0.4)
-  .pointAltitude(0.01)
+  .pointRadius(0.45)
+  .pointAltitude(0.02)
   .labelsData(cityData)
   .labelLat('lat')
   .labelLng('lng')
@@ -89,46 +105,104 @@ const myGlobe = Globe()
   .labelColor(() => 'rgba(255,255,255,0.85)')
   .labelResolution(2);
 
+myGlobe.pointOfView({lat: 10, lng:0, altitude: 2.2}, 0);
+const controls = myGlobe.controls();
+if (controls){
+  controls.autoRotate=true;
+  controls.autoRotateSpeed=0.3;
+}
+
 //glow the hovered point
 myGlobe.onPointHover(point=> {
   hoveredCity=point;
   myGlobe
     .pointColor(d=> d===hoveredCity? "#ffffff": "#ffa500")
-    .pointRadius(d=> d===hoveredCity ? 0.7: 0.4)
-    .pointAltitude(d=>d===hoveredCity ? 0.03: 0.01);
+    .pointRadius(d=> d===hoveredCity ? 0.8: 0.45)
+    .pointAltitude(d=>d===hoveredCity ? 0.04: 0.02);
   globeElement.style.cursor = point? 'pointer' : "default";
 });
 
 myGlobe.onPointClick(point=> {
-  console.log("clicked",point);
-  showCityInfo(point);
-  myGlobe.pointOfView({lat:point.lat, lng: point.lng, altitude:1.5},800);
-  setTimeout(()=> showCityInfo(point),850);
+  if(!point)return;
+  if(!point.cuisines|| !point.cuisines.length){
+    console.warn("No cuisines for", point.name);
+    return;
+  }
+  myGlobe.pointOfView({lat:point.lat, lng: point.lng, altitude:1.5},700);
+  setTimeout(()=> showCityInfo(point),650);
 });
 
 
 function showCityInfo(city) {
   const box = document.getElementById('city-info');
+  const closeBtn=document.getElementById("city-close");
   const cuisine = city.cuisines[0];
   box.innerHTML = `
+    <button id="city-close" aria-label="Close">✕</button>
+    ${cuisine.photoURL ? `<img class="dish-img" src="${cuisine.photoURL}" alt="${cuisine.dish_name}">` : ''}
     <h3>${city.name}, ${city.country}</h3>
     <div class="dish">${cuisine.dish_name}</div>
     <div class="cuisine">${cuisine.type} • ${cuisine.course}</div>
     <div class="desc">${cuisine.description}</div>
-
     ${cuisine.recommendations.map(r => `
       <div class="rec">
-        <strong>${r.name}</strong>
-        <span class="price">${r.priceRange}</span>
-        <div class="address">${r.address}</div>
-        <a href="${r.link}" target="_blank">View on Google Maps</a>
+        <div><strong>${r.name}</strong><span class="price">${r.priceRange || ''}</span></div>
+        <div class="address">${r.address || ''}</div>
+        <div><a href="${r.link}" target="_blank" rel="noopener noreferrer">View on Google Maps</a></div>
       </div>
     `).join('')}
   `;
 
-  const { x, y } = myGlobe.getScreenCoords(city.lat, city.lng, 0.01);
-  box.style.left = `${x + 20}px`;
-  box.style.top = `${y - 20}px`;
-  box.style.display="block";
+  let coords;
+  try{
+    coords=myGlobe.toScreenCoords(city.lat, city.lng);
+  } catch(e){
+    const rect= globeElement.getBoundingClientRect();
+    coords= {x: rect.width /2, y: rect.height/2};
+  }
+
+  const padding=12;
+  const boxWidth=320;
+  const boxHeight= 260;
+  let left = coords.x +18;
+  let top = coords.y-20;
+
+  // clamp horizontally
+  const vw = window.innerWidth;
+  if (left + boxWidth + padding > vw) left = coords.x - boxWidth - 18;
+  if (left < padding) left = padding;
+
+  // clamp vertically
+  const vh = window.innerHeight;
+  if (top + boxHeight + padding > vh) top = vh - boxHeight - padding;
+  if (top < padding) top = padding;
+
+  box.style.left =`${left}px`;
+  box.style.top =`${top}px`;
+  box.style.display = "block";
+  box.setAttribute("aria-hidden", "false");
+
+  const close= document.getElementById("city-close");
+  if(close){
+    close.onclick = () => hideCityInfo();
+  }
+
+  setTimeout(()=>{
+    window.addEventListener("click", onWindowClick);
+  },0);
+  function onWindowClick(e){
+    if(!box.contains(e.target))hideCityInfo();
+  }
+  function hideCityInfo(){
+    box.style.display="none";
+    box.setAttribute("aria-hidden", "true");
+    window.removeEventListener("click, onWindowCLick");
+  }
 }
 
+window.addEventListener("keydown", e=> {
+  if(e.key=== "Escape"){
+    const box= document.getElementById("city-info");
+    if (box) { box.style.display = 'none'; box.setAttribute('aria-hidden', 'true'); }
+  }
+})
