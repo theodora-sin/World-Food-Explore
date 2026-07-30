@@ -196,7 +196,7 @@ function showCityInfo(city) {
   function hideCityInfo(){
     box.style.display="none";
     box.setAttribute("aria-hidden", "true");
-    window.removeEventListener("click, onWindowCLick");
+    window.removeEventListener("click", onWindowCLick);
   }
 }
 
