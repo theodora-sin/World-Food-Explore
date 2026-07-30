@@ -21,7 +21,7 @@ myGlobe.pointOfView({lat: 10, lng:0, altitude: 2.2}, 0);
 const controls = myGlobe.controls();
 if (controls){
   controls.autoRotate=true;
-  controls.autoRotateSpeed=0.3;
+  controls.autoRotateSpeed=1.5;
 }
 
 const labelLayer = document.getElementById("label-layer");
