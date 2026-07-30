@@ -4,8 +4,8 @@ const cityData=[
   {
     name:"Bangkok",
     country:"Thailand",
-    lat:"13.806424",
-    lng:"100.448832",
+    lat:13.806424,
+    lng:100.448832,
     cuisines:[{
       type: "Thai",
       dish_name:"Pad Thai",
@@ -25,8 +25,8 @@ const cityData=[
 {
   name:"Da Nang",
   country:"Vietnam",
-  lat:"16.090693",
-  lng:"108.409756",
+  lat:16.090693,
+  lng:108.409756,
   cuisines:[{
     type:"Vietnamese",
     dish_name:"Bún Chả Cá",
@@ -45,8 +45,8 @@ const cityData=[
 {
   name:"Cebu ",
   country:"Phillippines",
-  lat:"10.296785",
-  lng:"123.915569",
+  lat:10.296785,
+  lng:123.915569,
   cuisines:[{
     type:"Filipino",
     dish_name:"Lechon",
@@ -63,6 +63,7 @@ const cityData=[
 
 }
 ]
+
 
 const globeElement=document.getElementById("globeViz");
 
