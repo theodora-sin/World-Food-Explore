@@ -156,12 +156,13 @@ html,body{
     height: 100vh; 
     pointer-events: none; 
     z-index: 45; 
+    transition: opacity 0.15s ease;
 }
 .city-label { 
     pointer-events: auto; 
     cursor: pointer; 
     transform: translate(-50%,-50%); 
-    transition: left 0.1s linear, top 0.1s linear;
+    transition: left 0.05s linear, top 0.05s linear;
 }
 .city-label .dot { 
     display:inline-block; 
