@@ -96,6 +96,7 @@ myGlobe.onPointHover(point=> {
 });
 
 myGlobe.onPointClick(point=> {
+  console.log("clicked",point);
   showFoodCard(point);
   myGlobe.pointOfView({lat:point.lat, lng: point.lng, altitude:1.5},800);
 });
