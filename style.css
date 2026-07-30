@@ -147,3 +147,31 @@ html,body{
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top:10px;
 }
+
+#label-layer { 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    pointer-events: none; 
+    z-index: 45; 
+}
+.city-label { 
+    pointer-events: auto; 
+    cursor: pointer; 
+    transform: translate(-50%,-50%); 
+    transition: transform 0.12s ease, box-shadow 0.12s ease; }
+.city-label .dot { 
+    display:inline-block; 
+    width:8px; height:8px; 
+    background:#ffa500; 
+    border-radius:50%; 
+    margin-right:6px; 
+    vertical-align:middle; 
+    box-shadow:0 0 6px rgba(255,165,0,0.9); 
+}
+.city-label:hover { 
+    transform: translate(-50%,-50%) scale(1.06); 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6); 
+}
