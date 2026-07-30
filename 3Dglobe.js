@@ -45,7 +45,7 @@ function createLablels(data){
     el.style.background = 'rgba(0,0,0,0.5)';
     el.style.borderRadius = '6px';
     el.style.border = '1px solid rgba(255,165,0,0.12)';
-    el.style.display = 'none'; // shown by placeLabels
+    el.style.display = 'none'; //  shown only while dragging
     labelLayer.appendChild(el);
 
     el.addEventListener("click", (ev) => {
@@ -56,6 +56,40 @@ function createLablels(data){
 });
 }
 createLablels(cityData);
+
+let isDragging =false;
+function showLabelLayer(){
+  labelLayer.style.opacity ="1";
+  labelLayer.style.pointerEvents="auto";
+}
+function hideLabelLayer(){
+  labelLayer.style.opacity="0";
+  labelLayer.style.pointEvents="none";
+  while (labelLines.firstChild) labelLines.removeChild(labelLines.firstChild);
+}
+
+//start hidden layer:
+if(controls){
+  controls.addEventListener("start",()=> {
+    isDragging=true;
+    showLabelLayer();
+    schedulePlaceLabels();
+  });
+
+  controls.addEventListener("end", ()=> {
+    isDragging=false;
+    hideLabelLayer();
+  });
+
+  controls.addEventListener("change",()=> {
+    if (isDragging) schedulePlaceLabels();
+  });
+}
+
+window.addEventListener('resize', () => {
+  if (isDragging) schedulePlaceLabels();
+});
+
 
 let placeLabelsThrottle = null;
 function placeLabels() {
