@@ -1,5 +1,6 @@
 import Globe from 'https://esm.sh/globe.gl';
 let hoveredCity =null;
+
 const cityData=[
   {
     name:"Bangkok",
@@ -99,7 +100,9 @@ myGlobe.onPointClick(point=> {
   console.log("clicked",point);
   showCityInfo(point);
   myGlobe.pointOfView({lat:point.lat, lng: point.lng, altitude:1.5},800);
+  setTimeout(()=> showCityInfo(point),850);
 });
+
 
 function showCityInfo(city) {
   const box = document.getElementById('city-info');
@@ -120,8 +123,9 @@ function showCityInfo(city) {
     `).join('')}
   `;
 
-  const{x,y} = myGlobe.toScreenCoords(city.lat, city.lng);
+  const { x, y } = myGlobe.getScreenCoords(city.lat, city.lng, 0.01);
   box.style.left = `${x + 20}px`;
   box.style.top = `${y - 20}px`;
   box.style.display="block";
 }
+
