@@ -161,7 +161,8 @@ html,body{
     pointer-events: auto; 
     cursor: pointer; 
     transform: translate(-50%,-50%); 
-    transition: transform 0.12s ease, box-shadow 0.12s ease; }
+    transition: left 0.1s linear, top 0.1s linear;
+}
 .city-label .dot { 
     display:inline-block; 
     width:8px; height:8px; 
