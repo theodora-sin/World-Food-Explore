@@ -63,7 +63,7 @@ function placeLabels() {
   while (labelLines.firstChild) labelLines.removeChild(labelLines.firstChild);
 
   const labels = [];
-  const padding = 6;
+  const padding = 10;
 
   // compute screen coords for each city
   cityData.forEach((d, i) => {
@@ -98,7 +98,7 @@ function placeLabels() {
       const overlapY = (A.h + B.h) / 2 + padding - Math.abs(dy);
       if (overlapX > 0 && overlapY > 0) {
         const dist = Math.hypot(dx, dy);
-        if (dist < 18) {
+        if (dist < 26) {
           // Very close together — queue for spiderfy instead of a simple push
           A._cluster = A._cluster || [];
           B._cluster = B._cluster || [];
