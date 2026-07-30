@@ -50,7 +50,7 @@ function createLablels(data){
 
     el.addEventListener("click", (ev) => {
       ev.stopPropagation();
-      const idx= +el.dataset,index;
+      const idx= +el.dataset.index;
       showCityInfo(data[idx]);
     });
 });
@@ -167,7 +167,6 @@ function schedulePlaceLabels(){
 
 schedulePlaceLabels();
 
-const controls = myGlobe.controls();
 if (controls){
   controls.addEventListener("change", () => schedulePlaceLabels());
 }
@@ -175,7 +174,7 @@ window.addEventListener('resize', () => schedulePlaceLabels());
 
 const originalPointOfView = myGlobe.pointOfView;
 myGlobe.pointOfView= function(coords,ms){
-  const ret = orginalPointOfView.call(this, coords, ms);
+  const ret = originalPointOfView.call(this, coords, ms);
   setTimeout(()=> schedulePlaceLabels(), (ms || 0) + 60);
   return ret;
 };
