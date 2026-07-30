@@ -118,3 +118,32 @@ html,body{
     text-decoration:underline;
 }
 
+#city-info .field {
+  margin-bottom: 6px;
+}
+#city-info .label{
+    display: inline-block;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color: #888;
+    width: 60px;
+}
+#city-info .value {
+  font-size: 14px;
+  color: #eee;
+}
+#city-info .value.dish {
+    font-size:16px;
+    font-weight:600;
+    color:#ffa500;
+}
+#city-info .recs-heading {
+    font-size:11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color:#888;
+    margin:14px 0 6px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top:10px;
+}
