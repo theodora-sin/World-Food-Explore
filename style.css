@@ -118,7 +118,3 @@ html,body{
     text-decoration:underline;
 }
 
-@media (max-width:940px){
-    #city-info{min-width:200px; max-width:260px; font-size: 14px;}
-    #city-info .dish-img{height:110px;}
-}
