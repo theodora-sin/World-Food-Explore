@@ -155,7 +155,7 @@ function showCityInfo(city) {
 
   let coords;
   try{
-    coords=myGlobe.toScreenCoords(city.lat, city.lng);
+    coords=myGlobe.getScreenCoords(city.lat, city.lng, 0.02);
   } catch(e){
     const rect= globeElement.getBoundingClientRect();
     coords= {x: rect.width /2, y: rect.height/2};
