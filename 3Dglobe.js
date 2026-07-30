@@ -12,7 +12,7 @@ const cityData=[
       course:"main",
       photoURL:"images/pad_thai.jpg",
       description:"Stir-fried rice noodles with egg, fresh mung bean sprouts, chopped scallions or garlic chives, tamarind, cubed firm tofu.",
-      recommendation:[
+      recommendations:[
         {
           name:"Thipsamai",
           priceRange:"$$",
@@ -27,13 +27,13 @@ const cityData=[
   country:"Vietnam",
   lat:"16.090693",
   lng:"108.409756",
-  cusines:[{
+  cuisines:[{
     type:"Vietnamese",
     dish_name:"Bún Chả Cá",
     course:"main",
     photoURL:"images/fishcake.jpg",
     description:"Fish cake soup with seasoned crab mince, round rice noodles and a fragrant broth.",
-    recommendation:[{
+    recommendations:[{
       name:"Bun Cha Ca Ba Phien",
       priceRange:"$",
       address: "06 Đường Cao Hồng Lãnh, Hội An, Đà Nẵng, Vietnam",
@@ -46,13 +46,14 @@ const cityData=[
   name:"Cebu ",
   country:"Phillippines",
   lat:"10.296785",
-  ltn:"123.915569",
-  cusines:[{
+  ltg:"123.915569",
+  cuisines:[{
     type:"Filipino",
     dish_name:"Lechon",
+    course:"main",
     photoURL:"images/lechon.jpg",
     description:"A whole pig slowly roasted over charcoal, known for its crunchy skin and soft, juice meat.",
-    recommendation:[{
+    recommendations:[{
       name:"CNT Lechon",
       priceRange:"$",
       address:"8W59+W36, Jose L Briones Street, Cebu City, 6000 Lalawigan ng Cebu, Philippines",
@@ -64,7 +65,6 @@ const cityData=[
 ]
 
 const globeElement=document.getElementById("globeViz");
-let hoveredCity=null;
 
 const myGlobe = Globe()
   (document.getElementById('globeViz'))
@@ -80,7 +80,7 @@ const myGlobe = Globe()
   .labelsData(cityData)
   .labelLat('lat')
   .labelLng('lng')
-  .labeltext('name')
+  .labelText('name')
   .labelSize(1.2)
   .labelColor(() => 'rgba(255,255,255,0.85)')
   .labelResolution(2);
@@ -92,10 +92,10 @@ myGlobe.onPointHover(point=> {
     .pointColor(d=> d===hoveredCity? "#ffffff": "#ffa500")
     .pointRadius(d=> d===hoveredCity ? 0.7: 0.4)
     .pointAltitude(d=>d===hoveredCity ? 0.03: 0.01);
-  globeElement.style.cursor = point? 'pointer' : "defalut";
+  globeElement.style.cursor = point? 'pointer' : "default";
 });
 
-myGlobe.onPointclick(point=> {
+myGlobe.onPointClick(point=> {
   showFoodCard(point);
   myGlobe.pointOfView({lat:point.lat, lng: point.lng, altitude:1.5},800);
 });
