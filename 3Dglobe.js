@@ -64,7 +64,6 @@ const cityData=[
 }
 ]
 
-
 const globeElement=document.getElementById("globeViz");
 
 const myGlobe = Globe()
@@ -98,36 +97,31 @@ myGlobe.onPointHover(point=> {
 
 myGlobe.onPointClick(point=> {
   console.log("clicked",point);
-  showFoodCard(point);
+  showCityInfo(point);
   myGlobe.pointOfView({lat:point.lat, lng: point.lng, altitude:1.5},800);
 });
 
-function showFoodCard(city) {
-  const card = document.getElementById('food-card');
-  card.innerHTML = `
-    <button id="close-card">✕</button>
-    <h2>${city.name}, ${city.country}</h2>
-    <div class="cuisine-scroll">
-      ${city.cuisines.map(c => `
-        <div class="cuisine-block">
-          <img src="${c.photoURL}" alt="${c.dish_name}" />
-          <h3>${c.dish_name} <span class="course-tag">${c.course}</span></h3>
-          <p class="cuisine-type">${c.type}</p>
-          <p>${c.description}</p>
-          <ul class="recs">
-            ${c.recommendations.map(r => `
-              <li>
-                <strong>${r.name}</strong> (${r.priceRange}) — ${r.address}
-                <br/>
-                <a href="${r.link}" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
-      `).join('')}
-    </div>
-  `;
-  card.classList.add('visible');
-  document.getElementById("close-card").onclick = () => card.classList.remove("visible");
-} 
+function showCityInfo(city) {
+  const box = document.getElementById('city-info');
+  const cuisine = city.cuisines[0];
+  box.innerHTML = `
+    <h3>${city.name}, ${city.country}</h3>
+    <div class="dish">${cuisine.dish_name}</div>
+    <div class="cuisine">${cuisine.type} • ${cuisine.course}</div>
+    <div class="desc">${cuisine.description}</div>
 
+    ${cuisine.recommendations.map(r => `
+      <div class="rec">
+        <strong>${r.name}</strong>
+        <span class="price">${r.priceRange}</span>
+        <div class="address">${r.address}</div>
+        <a href="${r.link}" target="_blank">View on Google Maps</a>
+      </div>
+    `).join('')}
+  `;
+
+  const{x,y} = myGlobe.toScreenCoords(city.lat, city.lng);
+  box.style.left = `${x + 20}px`;
+  box.style.top = `${y - 20}px`;
+  box.style.display="block";
+}
