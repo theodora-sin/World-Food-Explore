@@ -150,6 +150,166 @@ if (controls){
   controls.autoRotateSpeed=0.3;
 }
 
+const labelLayer = document.getElementById("label-layer");
+const labelLines = document.getElementById("label-lines");
+
+function createLablels(data){
+  labelLayer.innerHTML = "";
+  data.forEach((d, i)=> {
+    const el= document.createElement("div");
+    el.className = "city-label";
+    el.id = `label-${i}`;
+    el.dataset.index = i;
+    el.innerHTML = `<span class="dot"></span><span class="text">${d.name}</span>`;
+    el.style.position = 'absolute';
+    el.style.transform = 'translate(-50%,-50%)';
+    el.style.pointerEvents = 'auto';
+    el.style.whiteSpace = 'nowrap';
+    el.style.fontSize = '13px';
+    el.style.color = '#fff';
+    el.style.padding = '4px 8px';
+    el.style.background = 'rgba(0,0,0,0.5)';
+    el.style.borderRadius = '6px';
+    el.style.border = '1px solid rgba(255,165,0,0.12)';
+    el.style.display = 'none'; // shown by placeLabels
+    labelLayer.appendChild(el);
+
+    el.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      const idx= +el.dataset,index;
+      showCityInfo(data[idx]);
+    })
+})
+}
+createLablels(cityData);
+
+let placeLabelsThrottle = null;
+function placeLabels() {
+  // clear lines
+  while (labelLines.firstChild) labelLines.removeChild(labelLines.firstChild);
+
+  const labels = [];
+  const padding = 6;
+
+  // compute screen coords for each city
+  cityData.forEach((d, i) => {
+    let coords;
+    try {
+      coords = myGlobe.toScreenCoords(d.lat, d.lng);
+    } catch (e) {
+      const rect = globeElement.getBoundingClientRect();
+      coords = { x: rect.width / 2, y: rect.height / 2 };
+    }
+    const el = document.getElementById(`label-${i}`);
+    el.style.left = `${coords.x}px`;
+    el.style.top = `${coords.y}px`;
+    el.style.display = 'block';
+
+    // measure
+    const rect = el.getBoundingClientRect();
+    labels.push({
+      i, el, x: coords.x, y: coords.y,
+      w: rect.width, h: rect.height,
+      cx: coords.x, cy: coords.y // original center
+    });
+  });
+
+  // simple greedy collision resolution (screen-space)
+  for (let a = 0; a < labels.length; a++) {
+    for (let b = a + 1; b < labels.length; b++) {
+      const A = labels[a], B = labels[b];
+      const dx = B.x - A.x, dy = B.y - A.y;
+      const overlapX = (A.w + B.w) / 2 + padding - Math.abs(dx);
+      const overlapY = (A.h + B.h) / 2 + padding - Math.abs(dy);
+      if (overlapX > 0 && overlapY > 0) {
+        // if extremely close (few pixels), mark for spiderfy
+        const dist = Math.hypot(dx, dy);
+        if (dist < 18) {
+          // group small cluster: we'll spiderfy later
+          A._cluster = A._cluster || [];
+          B._cluster = B._cluster || [];
+          A._cluster.push(B);
+          B._cluster.push(A);
+        } else {
+          // push them apart along vector
+          const angle = Math.atan2(dy, dx) || 0.001;
+          const shift = Math.max(overlapX, overlapY) / 2;
+          B.x += Math.cos(angle) * shift;
+          B.y += Math.sin(angle) * shift;
+          // apply transform
+          B.el.style.left = `${B.x}px`;
+          B.el.style.top = `${B.y}px`;
+        }
+      }
+    }
+  }
+
+  // spiderfy small clusters (groups of 2-4)
+  const processed = new Set();
+  labels.forEach(item => {
+    if (item._cluster && !processed.has(item.i)) {
+      // build unique cluster
+      const cluster = [item, ...item._cluster.filter(c => c.i !== item.i)];
+      // dedupe by index
+      const uniq = Array.from(new Set(cluster.map(c => c.i))).map(idx => labels.find(l => l.i === idx));
+      if (uniq.length > 1 && uniq.length <= 6) {
+        spiderfy(uniq, item.cx, item.cy);
+        uniq.forEach(u => processed.add(u.i));
+      }
+    }
+  });
+
+  // draw leader lines for any label that was moved away from its original center
+  labels.forEach(l => {
+    const moved = Math.hypot(l.x - l.cx, l.y - l.cy) > 2;
+    if (moved) {
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', l.cx);
+      line.setAttribute('y1', l.cy);
+      line.setAttribute('x2', l.x);
+      line.setAttribute('y2', l.y);
+      line.setAttribute('stroke', 'rgba(255,165,0,0.25)');
+      line.setAttribute('stroke-width', '1');
+      labelLines.appendChild(line);
+    }
+  });
+}
+function spiderfy(points, centerX, centerY){
+  const n= points.length;
+  const radius = 28 + (n-1) * 6;
+  points.forEach((p, idx) => {
+    const angle= (idx/n) * Math.PI *2;
+    p.x=centerX + Math.cos(angle) * radius;
+    P.y= centerY + Math.sin(angle) * radius;
+    p.el.style.left = `${p.x}px`;
+    p.el.style.top = `${p.y}px`;
+  })
+  }
+
+function schedulePlaceLabels(){
+  if(placeLabelsThrottle) return;
+  placeLabelsThrottle = setTimeout(()=> {
+    placeLabels();
+    placeLavelsThrottle = null;
+  },80);
+}
+
+schedulePlaceLabels();
+
+const controls = myGlobe.controls();
+if (controls){
+  controls.addEventListener("charge", () => schedulePlaceLabels());
+}
+window.addEventListener('resize', () => schedulePlaceLabels());
+
+const originalPointOfView = myGlobe.pointOfView;
+myGlobe.pointOfView= function(coords,ms){
+  const ret = orginalPointOfView.call(this, coords, ms);
+  setTimeout(()=> schedulePlaceLabels(), (ms || 0) + 60);
+  return ret;
+};
+
+
 //glow the hovered point
 myGlobe.onPointHover(point=> {
   hoveredCity=point;
