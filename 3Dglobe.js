@@ -60,13 +60,12 @@ createLablels(cityData);
 let isDragging =false;
 function showLabelLayer(){
   labelLayer.style.opacity ="1";
-  labelLayer.style.pointerEvents="auto";
 }
 function hideLabelLayer(){
   labelLayer.style.opacity="0";
-  labelLayer.style.pointEvents="none";
   while (labelLines.firstChild) labelLines.removeChild(labelLines.firstChild);
 }
+hideLabelLayer();
 
 //start hidden layer:
 if(controls){
@@ -132,7 +131,9 @@ function placeLabels() {
       const overlapY = (A.h + B.h) / 2 + padding - Math.abs(dy);
       if (overlapX > 0 && overlapY > 0) {
         const dist = Math.hypot(dx, dy);
-        if (dist < 26) {
+        const wasSpiderfied = A._wasSpiderfied || B._wasSpiderfied;
+        const spiderfyThreshold = wasSpiderfied ? 34 : 26;
+        if (dist < spiderfyThreshold) {
           // Very close together — queue for spiderfy instead of a simple push
           A._cluster = A._cluster || [];
           B._cluster = B._cluster || [];
@@ -159,11 +160,13 @@ function placeLabels() {
       const uniq = Array.from(new Set(cluster.map(c => c.i))).map(idx => labels.find(l => l.i === idx));
       if (uniq.length > 1 && uniq.length <= 6) {
         spiderfy(uniq, item.cx, item.cy);
-        uniq.forEach(u => processed.add(u.i));
+        uniq.forEach(u => { u._wasSpiderfied = true; processed.add(u.i); });
       }
+    } else if (!item._cluster) {
+      item._wasSpiderfied = false;
     }
   });
-
+  
   // draw leader lines for any label that was moved away from its original center
   labels.forEach(l => {
     const moved = Math.hypot(l.x - l.cx, l.y - l.cy) > 2;
