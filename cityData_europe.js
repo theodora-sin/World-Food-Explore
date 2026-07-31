@@ -132,4 +132,80 @@ export const cityData_europe = [
         }]
     }]
 },
-];
+{
+    name:"Marseille",
+    country:"France",
+    lat:43.302601,
+    lng:5.373018,
+    cuisines:[{
+        type:"French",
+        dish_name:"bouillabaisse",
+        course: "Main",
+        photoURL:"images/bouillabaisse.jpg",
+        description:"A rich fish stew made with fresh rockfish, saffron, garlic, and tomatoes.",
+        recommendations:[{
+            name:"Chez Fonfon",
+            priceRange:"$$$",
+            address:"140 Rue du Vallon des Auffes, 13007 Marseille, France",
+            link:"https://www.google.com/maps/place/Chez+Fonfon/@43.287025,5.3496317,16.58z/data=!4m10!1m2!2m1!1sChez+Fonfon!3m6!1s0x12c9c12a0d2ab5bf:0xcd80733d1e15d3d!8m2!3d43.2856188!4d5.3513021!15sCgtDaGV6IEZvbmZvbloNIgtjaGV6IGZvbmZvbpIBD2Zpc2hfcmVzdGF1cmFudOABAA!16s%2Fg%2F1tdlr4_v!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Paris",
+    country:"France",
+    lat:48.855566,
+    lng:2.347884,
+    cuisines:[{
+        type:"French",
+        dish_name:"baguette de tradition",
+        course: "Brunch",
+        photoURL:"images/baguette.jpg",
+        description:"French bread defined by strict legal standards, featuring a crisp crust, creamy-colored airy inside, and rich flavor",
+        recommendations:[{
+            name:"Fournil Dido",
+            priceRange:"$",
+            address:"103 Rue Didot, 75014 Paris, France",
+            link:"https://www.google.com/maps/place/Fournil+Didot/@48.8282572,2.3057985,15z/data=!3m1!4b1!4m6!3m5!1s0x47e6704dbb6a9c53:0x9afe6b669b5e0e0c!8m2!3d48.8282435!4d2.3160982!16s%2Fg%2F1pv29w9jl!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Zurich",
+    country:"Switzerland",
+    lat:47.376016,
+    lng:8.540719,
+    cuisines:[{
+        type:"Swiss",
+        dish_name:"Züri Gschnätzlets",
+        course: "Main",
+        photoURL:"images/zuri.jpg",
+        description:"Traditional Swiss comfort food featuring tender strips of veal, a rich cream sauce, and mushrooms.",
+        recommendations:[{
+            name:"Restaurant Kronenhalle",
+            priceRange:"$$$$",
+            address:"Rämistrasse 4, 8001 Zürich, Switzerland",
+            link:"https://www.google.com/maps/place/Restaurant+Kronenhalle/@47.367635,8.5355142,15z/data=!3m1!4b1!4m6!3m5!1s0x479aa0ab69b427c7:0x5a98314e0ffa2db6!8m2!3d47.3676209!4d8.5458139!16s%2Fg%2F122h099x!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Brussels",
+    country:"Belgium",
+    lat:50.848045,
+    lng:4.353351,
+    cuisines:[{
+        type:"Western",
+        dish_name:" Belgian waffles",
+        course: "Dessert",
+        photoURL:"images/waffle.jpg",
+        description:"Light, fluffy Brussels waffles or dense, caramelised Liège waffles.",
+        recommendations:[{
+            name:"Aux Gaufres de Bruxelles ",
+            priceRange:"$$",
+            address:"Rue du Marché aux Herbes 113, 1000 Bruxelles, Belgium",
+            link:"https://www.google.com/maps/place/Aux+Gaufres+De+Bruxelles/@50.8459096,4.3520097,16.78z/data=!4m6!3m5!1s0x47c3c47f0dfa43e1:0xc7e51b34b37b457a!8m2!3d50.8462636!4d4.3545541!16s%2Fg%2F1hc2mp0nz!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+]
