@@ -16,7 +16,9 @@ export function load3DGlobe(){
     .pointColor(()=> '#ffa500')
     .pointRadius(0.45)
     .pointAltitude(0.02)
-
+    window.addEventListener('resize',() => {
+      myGlobe.width(globeElement.clientWidth).height(globeElement.clientHeight);
+});
   myGlobe.pointOfView({lat: 10, lng:0, altitude: 2.2}, 0);
 
   const controls = myGlobe.controls();
