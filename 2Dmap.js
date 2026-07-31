@@ -1,4 +1,6 @@
 import{cityData} from "./cityData.js";
+import{renderCityCardHTML, wireCityCardClose} from "./citycard.js"
+
 export function load2DMap(){
     const map=L.map('map').setView([20,100],3);
 
@@ -8,9 +10,23 @@ export function load2DMap(){
     }).addTo(map);
 
     cityData.forEach(city=> {
+        if(typeof city.lat!== "number" || typeof city.lng!== 'number'){
+            console.warn(`Skipping ${city.name} — invalid lat/lng`, city);
+            return;
+        }
         const marker=L.marker([city.lat, city.lng]).addTo(map);
         marker.on("click",()=>{
-            showCityInfo(city);
+            showCityInfoMobile(city);
         })
     })
+}
+
+function showCityInfoMobile(city){
+    const box= document.getElementById('city-info');
+    box.innerHTML = renderCityCardHTML(city);
+    box.classList.add('mobile-sheet');
+    box.style.display= "block";
+    box.setAttribute("aria-hidden", "false");
+    requestAnimationFrame(()=> box.classList.add('visible'));
+    wireCityCardClose(box);
 }
