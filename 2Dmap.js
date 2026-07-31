@@ -29,7 +29,7 @@ export function load2DMap(){
     });
 
 
-    cityData.forEach(city=> {
+[...cityData, ...cityData_europe].forEach(city=> {
         if(typeof city.lat!== "number" || typeof city.lng!== 'number'){
             console.warn(`Skipping ${city.name} — invalid lat/lng`, city);
             return;
