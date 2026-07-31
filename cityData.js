@@ -401,5 +401,23 @@ export const cityData=[
       }]
     }]
   },
-
+  {
+    name:"Nadi",
+    country:"Fiji",
+    lat:-17.780370,
+    lng:177.430245,
+    cuisines:[{
+      type:"Pacific Island dish",
+      dish_name:"Kokoda",
+      course:"Starter",
+      photoURL:"images/kokoda.jpg",
+      description:"Raw mahi-mahi or other white fish marinated in lime juice, then mixed with thick coconut cream, onions, tomatoes, and chilies.",
+      recommendations:[{
+        name:"Nadina Authentic Fijian Restaurant",
+        priceRange:"$$",
+        address:"Building C, Shop R1 & R2, Levu, Denarau Island, Fiji",
+        link:"https://www.google.com/maps/place/Nadina+%7C+Authentic+Fijian+Restaurant/@-17.7667939,177.3539279,13.33z/data=!4m6!3m5!1s0x6e1744ca94961bdf:0xdf4ecdfef6cc696e!8m2!3d-17.7712549!4d177.3794917!16s%2Fg%2F11c0qgq619!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
 ]
