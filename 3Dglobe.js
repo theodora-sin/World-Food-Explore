@@ -1,6 +1,6 @@
 import Globe from 'https://esm.sh/globe.gl';
 import{cityData} from "./cityData.js";
-export function load3DGlobe{
+export function load3DGlobe(){
   let hoveredCity =null;
   const globeElement=document.getElementById("globeViz");
 
