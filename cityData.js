@@ -501,7 +501,7 @@ export const cityData=[
     name: "Islamabad",
     country:"Pakistan",
     lat:33.701238,
-    ltn:73.035287,
+    lng:73.035287,
     cuisines:[{
       type:"South Asian",
       dish_name:"Chicken Karahi",
