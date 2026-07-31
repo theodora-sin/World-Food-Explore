@@ -6,8 +6,8 @@ delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
   iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',    
-})
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+});
 
 export function load2DMap(){
     const map=L.map('map',{
@@ -23,16 +23,25 @@ export function load2DMap(){
     setTimeout(()=> map.invalidateSize(), 100);
     window.addEventListener('resize',() => map.invalidateSize());
 
+    const clusterGroup = L.markerClusterGroup({
+        maxClusterRadius:50,
+        spiderfyOnMaxZoom:true
+    });
+
+
     cityData.forEach(city=> {
         if(typeof city.lat!== "number" || typeof city.lng!== 'number'){
             console.warn(`Skipping ${city.name} — invalid lat/lng`, city);
             return;
         }
-        const marker=L.marker([city.lat, city.lng]).addTo(map);
-        marker.on("click",()=>{
+        const marker=L.marker([city.lat, city.lng]);
+        marker.on("click",(e)=>{
+            if(e.originalEvent) e.originalEvent.stopPropagation();
             showCityInfoMobile(city);
-        })
+        });
+        clusterGroup.addLayer(marker);
     });
+    map.addLayer(clusterGroup);
     return map;
 }
 
