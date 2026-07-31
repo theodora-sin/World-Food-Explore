@@ -1,5 +1,5 @@
-import{load3DGlobe} from "./3Dglobe.js";
-import{load2DMap}from "./2Dmap.js";
+import{ load3DGlobe } from "./3Dglobe.js";
+import{ load2DMap }from "./2Dmap.js";
 
 const isMobile= window.innerWidth < 768;
 if(isMobile){
