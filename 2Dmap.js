@@ -1,4 +1,5 @@
 import{cityData} from "./cityData.js";
+import{cityData_europe} from"./cityData_europe.js";
 import{renderCityCardHTML, wireCityCardClose} from "./citycard.js"
 
 delete L.Icon.Default.prototype._getIconUrl;
