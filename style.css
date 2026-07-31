@@ -72,6 +72,24 @@ html,body{
     transform: translateY(0);
 }
 
+#help-btn{
+    position: fixed;
+    top:16px;
+    right:16px;
+    z-index: 61;
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.75);
+    color:#eee;
+    font-size:16px;
+    cursor:pointer;
+}
+#info-box.hidden{
+    display:none;
+}
+
 #city-close{
     position:absolute;
     top:8px;
