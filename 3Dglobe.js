@@ -12,7 +12,7 @@ export function load3DGlobe(){
     .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
     .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png') 
     .backgroundColor("rgba(0,0,0,0)")
-    .pointsData(cityData)
+    .pointsData(cityData,cityData_europe)
     .pointLat('lat')
     .pointLng('lng')
     .pointColor(()=> '#ffa500')
@@ -104,7 +104,7 @@ export function load3DGlobe(){
     const padding = 10;
 
     // compute screen coords for each city
-    cityData.forEach((d, i) => {
+[...cityData, ...cityData_europe].forEach((d, i) => {
       let coords;
       try {
         coords = myGlobe.getScreenCoords(d.lat, d.lng,0.02);
