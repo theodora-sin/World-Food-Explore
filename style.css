@@ -76,7 +76,7 @@ html,body{
     position: fixed;
     top:16px;
     right:16px;
-    z-index: 61;
+    z-index: 5000;
     width:32px;
     height:32px;
     border-radius:50%;
@@ -220,4 +220,29 @@ html,body{
 }
 .city-label.text{
     vertical-align:middle;
+}
+
+@media (max-width:480px){
+    #city-info.mobile-sheet{
+        max-height:60vh;
+        padding:12px 14px;
+        font-size:13px;
+    }
+    #city-info .dish-img{
+        height:100px;
+    }
+    #city-info h3{
+        font-size:15px;
+    }
+    #city-info .value.dish{
+        font-size:14px;
+    }
+    #city-info .desc{
+        font-size:12px;
+        line-height:1.4;
+    }
+    #city-info .rec{
+        padding:6px 8px;
+        margin-bottom:6px;
+    }
 }
