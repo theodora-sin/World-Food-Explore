@@ -48,7 +48,7 @@ html,body{
     padding:14px 16px;
     border-radius:10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    z-index:120;
+    z-index:5000;
     pointer-events:auto;
     display:none;
     transform-origin: top left;
