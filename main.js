@@ -20,7 +20,7 @@ function showMap(){
     if(!mapInstance){
         mapInstance = load2DMap();
     } else{
-        setTimeou(() => mapInstance.invalidateSize(), 50);
+        setTimeout(() => mapInstance.invalidateSize(), 50);
     }
     mode="2d";
 }
