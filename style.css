@@ -53,6 +53,8 @@ html,body{
     display:none;
     transform-origin: top left;
     font-family:Arial, Helvetica, sans-serif;
+    overflow-y:auto;
+    box-sizing:border-box;
 }
 
 #city-info.mobile-sheet{
@@ -113,8 +115,8 @@ html,body{
 }
 
 #city-info .dish-img{
-    width: 200px;
-    height:200px;
+    width: 100%;
+    height: 160px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -224,12 +226,14 @@ html,body{
 
 @media (max-width:480px){
     #city-info.mobile-sheet{
-        max-height:60vh;
-        padding:12px 14px;
+        max-height:55vh;
+        padding:12px 14px 20px 14px;
         font-size:13px;
+        overflow-y:auto;
     }
     #city-info .dish-img{
-        height:100px;
+        width:100px;
+        height:90px;
     }
     #city-info h3{
         font-size:15px;
@@ -244,5 +248,10 @@ html,body{
     #city-info .rec{
         padding:6px 8px;
         margin-bottom:6px;
+    }
+    #city-close{
+        position: sticky;
+        top:0;
+        z-index:10;
     }
 }
