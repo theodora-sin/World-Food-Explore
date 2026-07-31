@@ -443,7 +443,7 @@ export const cityData=[
     name:"Kathmandu",
     country:"Nepal",
     lat:27.713241,
-    ltn:85.317364,
+    lng:85.317364,
     cuisines:[{
       types:"Himalayan",
       dish_name:"momo",
