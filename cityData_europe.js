@@ -208,4 +208,99 @@ export const cityData_europe = [
         }]
     }]
 },
+  {
+    name:"Oslo",
+    country:"Norway",
+    lat:59.912244,
+    lng:10.731485,
+    cuisines:[{
+        type:"Scandinavian",
+        dish_name:"Norwegian Waffles",
+        course: "Dessert",
+        photoURL:"images/waffle.jpg",
+        description:"Heart-shaped waffles served warm, often slathered with sour cream and jam, or topped with sweet brown cheese",
+        recommendations:[{
+            name:"Haralds Vaffel",
+            priceRange:"$",
+            address:"Olaf Ryes Plass 3, 0552 Oslo, Norway",
+            link:"https://www.google.com/maps/place/Haralds+Vaffel/@59.9221686,10.7575107,17z/data=!3m1!4b1!4m6!3m5!1s0x46416ef655300057:0xcd2b6ef3f1dbbf73!8m2!3d59.9221686!4d10.7575107!16s%2Fg%2F11bby72q18?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Copenhagen",
+    country:"Denmark",
+    lat:55.680389,
+    lng:12.563437,
+    cuisines:[{
+        type:"Danish",
+        dish_name:"Smørrebrød",
+        course: "Lunch",
+        photoURL:"images/smorrebrod.jpg",
+        description:" Danish open-faced sandwich made with a dense base of buttered dark rye bread piled high with toppings like pickled herring, roast beef, and fresh shrimp",
+        recommendations:[{
+            name:"Aamanns 1921",
+            priceRange:"",
+            address:"Niels Hemmingsens Gade 19, 21, 1153 København, Denmark",
+            link:"https://www.google.com/maps/place/Aamanns+1921/@55.6802481,12.5655315,15z/data=!3m1!4b1!4m6!3m5!1s0x465253108b6fada1:0xc74623be5b58c30f!8m2!3d55.6802364!4d12.5758312!16s%2Fg%2F11df0q89c2?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Stockholm",
+    country:"Sweeden",
+    lat:59.326371,
+    lng:18.069199,
+    cuisines:[{
+        type:"Swedish",
+        dish_name:"Köttbullar",
+        course: "Main",
+        photoURL:"images/meatball.jpg",
+        description:"Traditional Swedish meatballs made from a mix of ground beef and pork, fine spices, and rich cream sauce",
+        recommendations:[{
+            name:"Restaurant Pelikan",
+            priceRange:"$$",
+            address:"Blekingegatan 40, 116 62 Stockholm, Sweden",
+            link:"https://www.google.com/maps/place/Restaurant+Pelikan/@59.3106056,18.065946,15z/data=!3m1!4b1!4m6!3m5!1s0x465f77f73d7525ad:0xe80a3e24c56808c7!8m2!3d59.3105951!4d18.0762457!16s%2Fg%2F11dykjln2?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Helsinki",
+    country:"Finland",
+    lat:60.169545,
+    lng:24.938231,
+    cuisines:[{
+        type:"Finnish",
+        dish_name:"poronkäristys",
+        course: "Main",
+        photoURL:"images/deer.jpg",
+        description:"Thin slices of reindeer meat sautéed slow and long in butter with onions, served with soft mashed potatoes and tart lingonberries.",
+        recommendations:[{
+            name:"Ravintola Kolme Kruunua",
+            priceRange:"$$$",
+            address:"Liisankatu 5, 00170 Helsinki, Finland",
+            link:"https://www.google.com/maps/place/Ravintola+Kolme+Kruunua/@60.1743473,24.9486454,15z/data=!3m2!4b1!5s0x46920bd0ef7d7595:0xfccd4ad9bdfbc95e!4m6!3m5!1s0x46920bd0ef75fcd1:0xd009051b606a840!8m2!3d60.174337!4d24.9589451!16s%2Fg%2F1w4vhl6p?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Tallinn",
+    country:"Estonia",
+    lat:59.436692,
+    lng:24.752138,
+    cuisines:[{
+        type:"Estonian",
+        dish_name:"Mulgipuder ",
+        course: "Main",
+        photoURL:"mulgipuder.jpg",
+        description:"Comfort dish made from mashed potatoes and groats, usually served warm with crispy bacon bits and sour cream.",
+        recommendations:[{
+            name:"III Draakon",
+            priceRange:"$$",
+            address:"Raekoja plats, 10146 Tallinn, Estonia",
+            link:"https://www.google.com/maps/place/III+Draakon/@59.4370213,24.7352786,15z/data=!3m1!4b1!4m6!3m5!1s0x46929362141b2fa3:0x663cacab4119168c!8m2!3d59.4370108!4d24.7455783!16s%2Fg%2F1td1c23l?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
 ]
