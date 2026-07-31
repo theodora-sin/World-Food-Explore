@@ -1,6 +1,7 @@
 import Globe from 'https://esm.sh/globe.gl';
 import{cityData} from "./cityData.js";
-import{cityData_europe} from "./cityData_europe.js";
+import{cityData_europe} from"./cityData_europe.js";
+const allCities= [...cityData, ...cityData_europe];
 
 export function load3DGlobe(){
   let hoveredCity =null;
@@ -12,7 +13,7 @@ export function load3DGlobe(){
     .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
     .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png') 
     .backgroundColor("rgba(0,0,0,0)")
-    .pointsData(cityData,cityData_europe)
+    .pointsData(allCities)
     .pointLat('lat')
     .pointLng('lng')
     .pointColor(()=> '#ffa500')
@@ -21,6 +22,7 @@ export function load3DGlobe(){
     window.addEventListener('resize',() => {
       myGlobe.width(globeElement.clientWidth).height(globeElement.clientHeight);
 });
+
   myGlobe.pointOfView({lat: 10, lng:0, altitude: 2.2}, 0);
 
   const controls = myGlobe.controls();
@@ -60,7 +62,7 @@ export function load3DGlobe(){
       });
   });
   }
-  createLablels(cityData);
+  createLablels(allCities);
 
   let isDragging =false;
   function showLabelLayer(){
@@ -104,7 +106,7 @@ export function load3DGlobe(){
     const padding = 10;
 
     // compute screen coords for each city
-[...cityData, ...cityData_europe].forEach((d, i) => {
+    allCities.forEach((d, i) => {
       let coords;
       try {
         coords = myGlobe.getScreenCoords(d.lat, d.lng,0.02);
