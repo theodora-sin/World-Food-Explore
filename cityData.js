@@ -458,4 +458,62 @@ export const cityData=[
       }]
     }]
   },
+    {
+    name:"Kochi",
+    country:"India",
+    lat:9.929725,
+    lng:76.261308,
+    cuisines:[{
+      type:"Indian",
+      dish_name:"Malabar Biryani",
+      course:"Main",
+      photoURL:"malabar.webp",
+      description:"Fragrant, short-grain kaima rice cooked with tender meat or prawns and rich spices.",
+      recommendations:[{
+        name:"Fort Paragon Restaurant by Calicut Paragon",
+        price:"$$",
+        address:"Fort Kochi, Kochi, Kerala 682001, India",
+        link:"https://www.google.com/maps/place/Fort+Paragon+Restaurant+by+Calicut+Paragon/@9.9655729,76.2400632,17z/data=!3m1!4b1!4m6!3m5!1s0x3b086de6a36d4937:0x60c50abced240e2f!8m2!3d9.9655729!4d76.2400632!16s%2Fg%2F11kr9mg288!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D",
+      }]
+    }]
+  },
+  {
+    name:"New Delhi",
+    country:"India",
+    lat:28.614603,
+    lng:77.200160,
+    cuisines:[{
+      type:"Indian",
+      dish_name:"Butter Chicken",
+      course:"Main",
+      photoURL:"images/butter_chicken.webp",
+      description:"An iconic curry featuring tender tandoori chicken pieces in a velvety, creamy tomato and butter sauce.",
+      recommendations:[{
+        name:" Gulati Restaurant",
+        price:"$$",
+        address:"6, Pandara Road, Market, near India Gate, New Delhi, Delhi 110003, India",
+        link:"https://www.google.com/maps/place/Gulati+Restaurant,+Pandara+Road/@28.6080997,77.0652709,11z/data=!4m10!1m2!2m1!1s+Gulati+Restaurant!3m6!1s0x390ce2db5b9c6b59:0x31291ea4d6453412!8m2!3d28.6078373!4d77.2300666!15sChFHdWxhdGkgUmVzdGF1cmFudFoTIhFndWxhdGkgcmVzdGF1cmFudJIBF25vcnRoX2luZGlhbl9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxNGRXTnNTVE5aTUZweVkxVjRNRkZYVW5WVU1VNW9VVmhLTVdJeVl4QULgAQD6AQUI6gEQPQ!16s%2Fg%2F11f2b0r_fg!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+
+      }]
+    }]
+  },
+  {
+    name: "Islamabad",
+    country:"Pakistan",
+    lat:33.701238,
+    ltn:73.035287,
+    cuisines:[{
+      type:"South Asian",
+      dish_name:"Chicken Karahi",
+      course:"Main",
+      photoURL:"images/karahi.webp",
+      description:"Spicy, tomato-based chicken curry cooked in an iron wok.",
+      recommendations:[{
+        name:"Al Qamar Restaurant",
+        price:"$",
+        address:"5 Peshawar Rd, H-13, Rawalpindi, Pakistan",
+        link:"https://www.google.com/maps/place/Al+Qamar+Restaurant/@33.6163395,72.9742784,14.07z/data=!4m10!1m2!2m1!1sAl+Qamar+Restaurant!3m6!1s0x38df96606c8b0971:0x6e6970f42081de89!8m2!3d33.6252034!4d72.9711557!15sChNBbCBRYW1hciBSZXN0YXVyYW50WhUiE2FsIHFhbWFyIHJlc3RhdXJhbnSSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11cn06fxzh!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
 ]
