@@ -28,7 +28,7 @@ export function load3DGlobe(){
   const controls = myGlobe.controls();
   if (controls){
     controls.autoRotate=true;
-    controls.autoRotateSpeed=1.2;
+    controls.autoRotateSpeed=1;
   }
 
   const labelLayer = document.getElementById("label-layer");
