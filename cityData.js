@@ -420,4 +420,42 @@ export const cityData=[
       }]
     }]
   },
+    {
+    name:"Dhaka",
+    country:"Bangladesh",
+    lat:23.808787,
+    lng:90.409345,
+    cuisines:[{
+      type:"South Asian",
+      dish_name:"Kacchi Biryani",
+      course:"Main",
+      photoURL:"images/biryani.jpg",
+      description:"Raw marinated meat, aromatic spices, and partially cooked rice are slow-cooked together in a sealed pot.",
+      recommendations:[{
+        name:"Kolkata Kachchi",
+        priceRange:"$$",
+        address:"14 Abul Hasnat Rd, Dhaka 1211, Bangladesh",
+        link:"https://www.google.com/maps/place/Kolkata+Kacchi+Ghor/@23.7181968,90.3979185,17z/data=!4m6!3m5!1s0x3755b8e2551cc177:0x3e790594a297f9b9!8m2!3d23.7181919!4d90.4004934!16s%2Fg%2F1ptww03p0!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
+  {
+    name:"Kathmandu",
+    country:"Nepal",
+    lat:27.713241,
+    ltn:85.317364,
+    cuisines:[{
+      types:"Himalayan",
+      dish_name:"momo",
+      course:"Main",
+      photoURL:"images/momo.jpg",
+      description:"Spiced meat or vegetable filled dumplings, served steamed, fried, or in a tangy sesame-tomato sauce.",
+      recommendations:[{
+        name:"Newa Mo:Mo Restaurant",
+        price:"$",
+        address:"Kwabahal, 38 Thamel Marg, Kathmandu 44600, Nepal",
+        link:"https://www.google.com/maps/place/Newa+MoMo+Restaurant/@27.7121934,85.3089661,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb18fdca27fe2d:0x78c12d982ccccabd!8m2!3d27.7121887!4d85.3115357!16s%2Fg%2F1hm2y7g6y!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D",
+      }]
+    }]
+  },
 ]
