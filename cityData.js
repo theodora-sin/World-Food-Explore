@@ -346,8 +346,8 @@ export const cityData=[
   {
     name:"Brisbane",
     country:"Australia",
-    lat:-27.354783,
-    lng:154.980860,
+    lat:-27.451943,
+    lng:153.046405,
     cuisines:[{
       type:"Cantonese",
       dish_name:"Dim Sum",
