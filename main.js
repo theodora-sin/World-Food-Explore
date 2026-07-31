@@ -8,6 +8,6 @@ if(isMobile){
     load2DMap();
 }else{
     document.getElementById("map").style.display = "none";
-    document.getElementById("globeViz").style.display = 'block';
+    document.getElementById("globeViz").style.display ='block';
     load3DGlobe();
 }
