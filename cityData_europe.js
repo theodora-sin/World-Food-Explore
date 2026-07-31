@@ -1,4 +1,4 @@
-const cityData_europe=[
+export const cityData_europe=[
  {
     name:"Athens",
     country:"Greece",
