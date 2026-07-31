@@ -8,11 +8,11 @@ export const cityData_europe = [
       type: "Greek",
       dish_name: "moussaka",
       course: "Main",
-      photoURL: "images/moussaka.jpg",  // also fixed below
+      photoURL: "images/moussaka.jpg",  
       description: "Layers of soft eggplant, sliced potatoes, and rich minced beef, all topped with a thick, creamy béchamel sauce.",
-      recommendations: [{               // was "recommendation"
+      recommendations: [{               
         name: "Filippou Restaurant",
-        priceRange: "$$",               // was "price"
+        priceRange: "$$",               
         address: "Xenokratous 19, Athina 106 75, Greece",
         link: "https://www.google.com/maps/place/FILIPPOU+Restaurant/@37.9791194,23.7341799,15z"
       }]
@@ -29,9 +29,9 @@ export const cityData_europe = [
       course: "Main",
       photoURL: "images/tavekosi.webp",
       description: "Baked lamb and seasoned rice bound in a rich, garlicky yogurt sauce.",
-      recommendations: [{               // was "recommendation"
+      recommendations: [{               
         name: "Odas Garden",
-        priceRange: "$$",               // was "price"
+        priceRange: "$$",               
         address: "Rruga Shenasi Dishnica, Tiranë, Albania",
         link: "https://www.google.com/maps/place/Odas+Garden/@41.3294891,19.8245044,17z"
       }]
