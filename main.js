@@ -11,3 +11,6 @@ if(isMobile){
     document.getElementById("globeWrap").style.display = 'block';
     load3DGlobe();
 }
+document.getElementById('help-btn').addEventListener('click',()=> {
+    document.getElementById('info-box').classList.toggle('hidden');
+});
