@@ -8,6 +8,8 @@ export function load2DMap(){
         maxZoom:18,
         attribution:'© OpenStreetMap'
     }).addTo(map);
+    setTimeout(()=> map.invalidateSize(), 100);
+    window.addEventListener('resize',() => map.invalidateSize());
 
     cityData.forEach(city=> {
         if(typeof city.lat!== "number" || typeof city.lng!== 'number'){
