@@ -382,5 +382,24 @@ export const cityData=[
       }]
     }]    
   },
+    {
+    name:"Auckland",
+    country:"New Zealand",
+    lat:-36.858813,
+    lng:174.75999,
+    cuisines:[{
+      type:"Western",
+      dish_name:"New Zealand Meat Pie",
+      course:"All time",
+      photoURL:"images/meatpie.png",
+      description:"A hand-sized savory pastry filled with minced or diced meat, rich gravy, and sometimes cheese or vegetables, encased in a flaky puff or shortcrust pastry",
+      recommendations:[{
+        name:"Muzza's Pies",
+        priceRange:"$",
+        address:"55 Richardson Road, Mount Albert, Owairaka 1025, New Zealand",
+        link:"https://www.google.com/maps/place/Muzza's+Pies/@-36.8922703,174.7029366,15z/data=!3m2!4b1!5s0x6d0d46e858eb7647:0x3a9283a72cf017f7!4m6!3m5!1s0x6d0d46e8589076f5:0x7424a600dc404e00!8m2!3d-36.8922879!4d174.7132363!16s%2Fg%2F1tgcs1k8!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+      }]
+    }]
+  },
 
 ]
