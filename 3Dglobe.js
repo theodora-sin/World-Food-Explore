@@ -298,7 +298,17 @@ export function load3DGlobe() {
     box.setAttribute("aria-hidden", "false");
  
     document.getElementById("city-close").onclick = () => hideCityInfo();
- 
+
+    const favBtn = document.getElementById("city-favorite");
+    if(favBtn){
+      favBtn.onclick =(e) =>{
+        e.stopPropagation();
+        const nowActive = toggleFavorite(city);
+        favBtn.textContent = nowActive ? '★' : '☆';
+        favBtn.classList.toggle('active', nowActive);
+      }
+    }
+
     function onWindowClick(e) {
       if (!box.contains(e.target)) hideCityInfo();
     }
