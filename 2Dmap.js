@@ -42,7 +42,12 @@ export function load2DMap(){
         clusterGroup.addLayer(marker);
     });
     map.addLayer(clusterGroup);
-    return map;
+  
+    function focusCity(city){
+        map.setView([city.lat, city.lng], 10, {animate:true});
+        showCityInfoMobile(city);
+    }
+    return { map, focusCity };
 }
 
 function showCityInfoMobile(city){
