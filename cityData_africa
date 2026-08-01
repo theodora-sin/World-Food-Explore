@@ -55,7 +55,7 @@ export const cityData_Africa=[
             link:"https://www.google.com/maps/place/La+Sqala/@33.6030115,-7.6293216,15z/data=!3m1!4b1!4m6!3m5!1s0xda7d286bded69f1:0x14366c0dc062234f!8m2!3d33.6029941!4d-7.6190219!16s%2Fg%2F1hfdr8mqw?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
         }]
     }]
-}
+},
 {
     name:"Abidjan",
     country:"Ivory Coast",
