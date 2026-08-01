@@ -113,4 +113,80 @@ export const cityData_Africa=[
         }]
     }]
 },
+{
+    name:"Harare",
+    country:"Zimbabwe",
+    lat:-17.822675,
+    lng:31.049784,
+    cuisines:[{
+        type:"Zimbabwean",
+        dish_name:"Sadza and Oxtail",
+        course: "Main",
+        photoURL:"images/sadza.jpg",
+        description:"Slow-simmered, tender oxtail gravy served with piping-hot, comforting maize meal sadza.",
+        recommendations:[{
+            name:"Gava's Restaurant",
+            priceRange:"$$",
+            address:"Belgravia Sports Club, 2nd St Ext, Harare, Zimbabwe",
+            link:"https://www.google.com/maps/place/Gavas+Restaurant/@-17.7968786,31.0334541,15z/data=!3m1!4b1!4m6!3m5!1s0x1931a50c40000001:0xbf021f6ebbe34286!8m2!3d-17.7968993!4d31.0437538!16s%2Fg%2F11cn96czpl?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Nairobi",
+    country:"Kenya",
+    lat:-1.292116,
+    lng:36.818464,
+    cuisines:[{
+        type:"Kenyan",
+        dish_name:"Nyama Choma",
+        course: "Main",
+        photoURL:"images/nyama.jpg",
+        description:"A traditional Kenyan dish consisting of grilled meat, typically beef or goat, served with a variety of side dishes.",
+        recommendations:[{
+            name:"The Carnivore Restaurant",
+            priceRange:"$$",
+            address:"Langata Link Rd, Nairobi, Kenya",
+            link:"https://www.google.com/maps/place/The+Carnivore+Restaurant/@-1.3286648,36.790596,15z/data=!4m10!1m2!2m1!1sThe+Carnivore+Restaurant!3m6!1s0x182f1014fed387d9:0x2acb161c6235e675!8m2!3d-1.3291611!4d36.8005417!15sChhUaGUgQ2Fybml2b3JlIFJlc3RhdXJhbnRaGiIYdGhlIGNhcm5pdm9yZSByZXN0YXVyYW50kgEKcmVzdGF1cmFudJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSS2IzVlhhV2huUlJBQuABAPoBBAgxEEk!16s%2Fm%2F026rgnv?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Johannesburg",
+    country:"South Africa",
+    lat:-26.206232,
+    lng:28.020958,
+    cuisines:[{
+        type:"South African",
+        dish_name:"kota",
+        course: "Main",
+        photoURL:"images/kota.png",
+        description:"A traditional South African dish made from cornmeal and served with a variety of accompaniments.",
+        recommendations:[{
+            name:"Ntsitsi’s Fun Foods",
+            priceRange:"$",
+            address:"Eben Cuyler Dr, Diepkloof Zone 3, Diepkloof, 1804, South Africa",
+            link:"https://www.google.com/maps/place/Ntsitsis+FUN+Foods/@-26.2433327,27.9412688,15z/data=!3m1!4b1!4m6!3m5!1s0x1e950916bc8ad537:0x5ee5355342df6a6!8m2!3d-26.2433523!4d27.9515685!16s%2Fg%2F11btrrppdq?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Cape Town",
+    country:"South Africa",
+    lat:-33.924869,
+    lng:18.424055,
+    cuisines:[{
+        type:"South African",
+        dish_name:"bobotie",
+        course: "Main",
+        photoURL:"images/bobotie.jpg",
+        description:"A fragrant Cape Malay baked dish made with spiced minced meat , dried fruit, and a savory golden egg-custard topping.",
+        recommendations:[{
+            name:"Bo-Kaap Kombuis,",
+            priceRange:"$$",
+            address:"8001, 7 August St, Schotsche Kloof, Cape Town, 8001, South Africa",
+            link:"https://www.google.com/maps/place/Bo-Kaap+Kombuis/@-33.9174494,18.4026095,15z/data=!3m1!4b1!4m6!3m5!1s0x1dcc67682b6dcdc9:0x94dfa3253b0a1831!8m2!3d-33.9174676!4d18.4129092!16s%2Fg%2F11b6t2hs7f?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
 ]
