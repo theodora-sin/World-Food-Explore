@@ -1,4 +1,4 @@
-const STORAGE_KEY ='food.Explorer.favourites';
+const STORAGE_KEY ='food.Explorer.favorites';
 function cityKey(city){
     return `${city.name}-${city.country}`;
 }
