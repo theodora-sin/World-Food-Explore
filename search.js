@@ -30,14 +30,14 @@ export function searchCities(getFocusCity) {
       return;
     }
     const matches = allCities.filter(city => {
-      const cuisine = city.cuisines && city.cuisines[0];
+      const cuisine = city.cuisines?.[0];
       if (!cuisine) return false; 
  
       return (
-        (city.name || '').toLowerCase().includes(q) ||
-        (city.country || '').toLowerCase().includes(q) ||
-        (cuisine.dish_name || '').toLowerCase().includes(q) ||
-        (cuisine.type || '').toLowerCase().includes(q)
+        city.name?.toLowerCase().includes(q) ||
+        city.country?.toLowerCase().includes(q) ||
+        cuisine.dish_name?.toLowerCase().includes(q) ||
+        cuisine.type?.toLowerCase().includes(q)
       );
     }).slice(0, 8);
     renderResults(matches);
