@@ -19,6 +19,7 @@ function showGlobe(){
         globeInstance = load3DGlobe();
     }
     mode = "3d";
+    setHelpText();
 }
 
 function showMap(){
@@ -30,6 +31,7 @@ function showMap(){
         setTimeout(() => mapInstance.invalidateSize(), 50);
     }
     mode="2d";
+    setHelpText();
 }
 
 function applyModeForWidth(){
