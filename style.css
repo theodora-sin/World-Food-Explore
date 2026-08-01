@@ -28,7 +28,7 @@ html,body{
 
 #info-box{
     position:fixed;
-    top: 16px; 
+    top: 64px; 
     right: 16px;
     background: rgba(0,0,0,0.75);
     color:#eee;
@@ -36,7 +36,7 @@ html,body{
     border-radius:6px;
     font-size:14px;
     border:1px solid rgba(255,255,255,0.1);
-    z-index:5000;
+    z-index:5500;
     pointer-events:none;
 }
 
@@ -80,7 +80,7 @@ html,body{
     position: fixed;
     top:24px;
     right:24px;
-    z-index: 5000;
+    z-index: 6000;
     width:32px;
     height:32px;
     border-radius:50%;
@@ -99,7 +99,7 @@ html,body{
     position:fixed;
     top:24px;
     left:24px;
-    z-index:5000;
+    z-index:6000;
     display:flex;
     gap:10px;
 }
@@ -165,7 +165,7 @@ body.mode-2d #surprise-btn{
 }
 
 @media (max-width:480px){
-    body.mode-2d #tap-bar{
+    body.mode-2d #top-bar{
         left:12px;
         top:12px;
         right:56px;
@@ -187,11 +187,20 @@ body.mode-2d #surprise-btn{
     }
 }
 
-.leaflet-bottom.leaflet-left{
-    margin-bottom:24px;
-    margin-left:12px;
+.leaflet-control-zoom{
+    display:flex !important;
+    flex-direction: row !important;
 }
-
+.leaflet-control-zoom-in{
+    border-radius: 6px 0 0 6px !important;
+}
+.leaflet-control-zoom-out{
+    border-radius: 0 6px 6px 0 !important;
+}
+.leaflet-bottom.leaflet-left{
+    margin-bottom:40px;
+    margin-left:16px;
+}
 
 #city-close{
     position:absolute;
