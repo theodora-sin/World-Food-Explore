@@ -164,6 +164,35 @@ body.mode-2d #surprise-btn{
     font-size:16px;
 }
 
+@media (max-width:480px){
+    body.mode-2d #tap-bar{
+        left:12px;
+        top:12px;
+        right:56px;
+        gap:6px;
+    }
+    body.mode-2d #search-input{
+        width:100%;
+        min-width:0;
+        font-size:14px;
+        padding:8px 10px;
+    }
+    body.mode-2d #surprise-btn{
+        padding:8px 10px;
+        font-size:14px;
+        white-space: nowrap;
+    }
+    body.mode-2d #info-box{
+        top:70px;
+    }
+}
+
+.leaflet-bottom.leaflet-left{
+    margin-bottom:24px;
+    margin-left:12px;
+}
+
+
 #city-close{
     position:absolute;
     top:8px;
