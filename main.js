@@ -51,4 +51,4 @@ document.getElementById('help-btn').addEventListener('click',()=> {
     document.getElementById('info-box').classList.toggle('hidden');
 });
 
-initSearch(() => (mode==="2d" ? mapInstance.focusCity : globeInstance.focusCity));
+searchCities(() => (mode==="2d" ? mapInstance.focusCity : globeInstance.focusCity));
