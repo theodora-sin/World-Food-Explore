@@ -516,4 +516,61 @@ export const cityData=[
       }]
     }]
   },
+    {
+    name:"Dubai",
+    country:"UAE",
+    lat:25.207014,
+    lng:55.264389,
+    cuisines:[{
+        type:"Arabian",
+        dish_name:"Machboos",
+        course: "Main",
+        photoURL:"images/machboos.jpg",
+        description:"Flavorful rice and meat slow-cooked with a distinct tangy kick from dried lemon.",
+        recommendations:[{
+            name:"Al Baik",
+            priceRange:"$$",
+            address:"Nad Al Sheba 1 Intersection Street - 5 & 20 - 5 - Dubai - United Arab Emirates",
+            link:"https://www.google.com/maps/place/Gerbou/@25.1557796,55.3135654,15z/data=!3m1!4b1!4m6!3m5!1s0x3e5f67007c0635df:0xb468b3e32e300b09!8m2!3d25.1557605!4d55.3238651!16s%2Fg%2F11y2dgsq65?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Riyadh",
+    country:"Saudi Arabia",
+    lat:24.717347,
+    lng:46.682492,
+    cuisines:[{
+        type:"Arabian",
+        dish_name:"Kabsa",
+        course: "Main",
+        photoURL:"images/kabsa.jpg",
+        description:"Aromatic rice dish layered with spiced meat and dried fruits.",
+        recommendations:[{
+            name:"Najd Village",
+            priceRange:"$$",
+            address:"King Abdul Aziz Branch Rd, Al Yasmeen, Riyadh 13322, Saudi Arabia",
+            link:"https://www.google.com/maps/place/Najd+Village/@24.7142528,46.5445926,11z/data=!4m10!1m2!2m1!1snajd+village!3m6!1s0x3e2ee49e6281d901:0x47539b721d337d51!8m2!3d24.8129216!4d46.6472709!15sCgxuYWpkIHZpbGxhZ2VaDiIMbmFqZCB2aWxsYWdlkgEKcmVzdGF1cmFudOABAA!16s%2Fg%2F11cjydy3ng?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+    }]
+  }]
+},
+{
+    name:"Tbilisi",
+    country:"Georgia",
+    lat:41.702911,
+    lng:44.813117,
+    cuisines:[{
+        type:"Georgian",
+        dish_name:"Khachapuri",
+        course: "Main",
+        photoURL:"images/khachapuri.jpg",
+        description:"Cheesy bread stuffed with a rich, creamy filling.",
+        recommendations:[{
+            name:"Retro",
+            priceRange:"$$",
+            address:"1 Davit Gamrekeli St, Tbilisi, Georgia",
+            link:"https://www.google.com/maps/place/Retro/@41.7211267,44.7602559,15z/data=!3m1!4b1!4m6!3m5!1s0x404472d8c0114997:0xa4b62947f530db3e!8m2!3d41.7211111!4d44.7705556!16s%2Fg%2F11cmx2htby?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
 ]
