@@ -1,0 +1,116 @@
+export const cityData_Africa=[
+    {
+    name:"Cario",
+    country:"Egypt",
+    lat:30.045648,
+    lng:31.233744,
+    cuisines:[{
+        type:"Egyptian",
+        dish_name:"Koshary",
+        course: "Main",
+        photoURL:"images/koshary.jpg",
+        description:"Egypt's national dish combining rice, pasta, lentils, and chickpeas, topped with spicy tomato sauce and crunchy fried onions.",
+        recommendations:[{
+            name:" Koshary Abou Tarek,",
+            priceRange:"$",
+            address:"١٦ Marouf, Qasr El Nil, Cairo Governorate 4272135, Egypt",
+            link:"https://www.google.com/maps/place/Koshary+Abou+Tarek/@30.0161873,31.1715436,12z/data=!4m10!1m2!2m1!1s+Koshary+Abou+Tarek!3m6!1s0x145840c0d951113d:0x3cd085938aad3157!8m2!3d30.0501531!4d31.237834!15sChJLb3NoYXJ5IEFib3UgVGFyZWtaFCISa29zaGFyeSBhYm91IHRhcmVrkgESa29zaGFyaV9yZXN0YXVyYW504AEA!16s%2Fg%2F11cmb114gj?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Tunis",
+    country:"Tunisia",
+    lat:36.806732,
+    lng:10.177478,
+    cuisines:[{
+        type:"Tunisian",
+        dish_name:"Couscous",
+        course: "Main",
+        photoURL:"images/couscous.jpg",
+        description:"The national dish. Fine semolina steamed over a rich meat or fish broth, served with vegetables and lamb, chicken, or fish.",
+        recommendations:[{
+            name:"Restaurant Belkadhi ",
+            priceRange:"$$",
+            address:"62 Rue Sidi Ben Arous, Tunis, Tunisia",
+            link:"https://www.google.com/maps/place/Restaurant+Belkadhi/@36.7991483,10.1592442,15z/data=!3m1!4b1!4m6!3m5!1s0x12fd330063cdf2ad:0xb1d51de7b91fcbf8!8m2!3d36.7991316!4d10.1695439!16s%2Fg%2F11x19yy7xc?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Casablanca",
+    country:"Morocco",
+    lat:33.578572,
+    lng:-7.632987,
+    cuisines:[{
+        type:"Moroccan",
+        dish_name:"Tagine",
+        course: "Main",
+        photoURL:"images/tagine.jpg",
+        description:"A traditional Moroccan stew cooked in a special clay pot, typically made with meat, vegetables, and a variety of spices.",
+        recommendations:[{
+            name:" La Sqala",
+            priceRange:"$$$",
+            address:"Bd des Almohades, Casablanca 20250, Morocco",
+            link:"https://www.google.com/maps/place/La+Sqala/@33.6030115,-7.6293216,15z/data=!3m1!4b1!4m6!3m5!1s0xda7d286bded69f1:0x14366c0dc062234f!8m2!3d33.6029941!4d-7.6190219!16s%2Fg%2F1hfdr8mqw?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+}
+{
+    name:"Abidjan",
+    country:"Ivory Coast",
+    lat:5.324628,
+    lng:-4.021822,
+    cuisines:[{
+        type:"Ivorian",
+        dish_name:"attiéké",
+        course: "Side",
+        photoURL:"images/attieke.jpg",
+        description:"A traditional West African dish made from grated cassava, often served with grilled fish or meat.",
+        recommendations:[{
+            name:"Chez Mado in Marcory",
+            priceRange:"$$",
+            address:"Abidjan, Côte d’Ivoire",
+            link:"https://www.google.com/maps/place/Chez+Mado+1+Poisson+Brais%C3%A9+Marcory+R%C3%A9sidentiel/@5.3122787,-4.0139589,13.22z/data=!4m6!3m5!1s0xfc1ebf7c11b169b:0xd52fb1cee57242db!8m2!3d5.3096132!4d-3.9888676!16s%2Fg%2F11csp7gfpm?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Lagos",
+    country:"Nigeria",
+    lat:6.613826,
+    lng:3.353228,
+    cuisines:[{
+        type:"Nigerian",
+        dish_name:"Jollof Rice",
+        course: "Main",
+        photoURL:"images/jollof_rice.jpg",
+        description:"A popular West African dish made with rice, tomatoes, and a variety of spices.",
+        recommendations:[{
+            name:"Firewood Jollof",
+            priceRange:"$$",
+            address:"10 Admiralty Wy, Lekki Phase 1, Eti Osa 105102, Lagos, Nigeria",
+            link:"https://www.google.com/maps/place/Firewood+Jollof/@6.4401582,3.4452495,15z/data=!3m1!4b1!4m6!3m5!1s0x103bf589f7da3f01:0x7fd06c6f5853e69a!8m2!3d6.440137!4d3.4555492!16s%2Fg%2F11vbg6s27w?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Kampala",
+    country:"Uganda",
+    lat:0.316050,
+    lng:32.5581907,
+    cuisines:[{
+        type:"Ugandan",
+        dish_name:"Katogo",
+        course: "Breakfast",
+        photoURL:"images/katogo.jpg",
+        description:"A traditional Ugandan dish made from grated cassava and served with a variety of accompaniments.",
+        recommendations:[{
+            name:"Just Katogo ",
+            priceRange:"$$",
+            address:"Valley courts, Kampala, Uganda",
+            link:"https://www.google.com/maps/place/Just+Katogo/@0.3237832,32.6092357,15z/data=!3m1!4b1!4m6!3m5!1s0x177dbb2bd60301cd:0x9791521dc084230d!8m2!3d0.3237617!4d32.6195354!16s%2Fg%2F11fnr4y692?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+]
