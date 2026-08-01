@@ -2,6 +2,7 @@ import Globe from 'https://esm.sh/globe.gl';
 import { cityData } from "./cityData.js";
 import { cityData_europe } from "./cityData_europe.js";
 import { cityData_Africa } from "./cityData_africa.js";
+import { isFavorite, toggleFavorite } from "./favorites.js";
 const allCities = [...cityData, ...cityData_europe, ...cityData_Africa];
  
 export function load3DGlobe() {
