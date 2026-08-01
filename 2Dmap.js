@@ -11,8 +11,10 @@ L.Icon.Default.mergeOptions({
 export function load2DMap() {
   const map = L.map('map', {
     tap: true,
-    tapTolerance: 25
+    tapTolerance: 25,
+    zoomControl:false,
   }).setView([20, 100], 3);
+  L.control.zoom({position: 'bottomleft'}).addTo(map);
  
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 20,
