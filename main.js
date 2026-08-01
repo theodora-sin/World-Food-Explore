@@ -1,9 +1,16 @@
 import{ load3DGlobe } from "./3Dglobe.js";
 import{ load2DMap }from "./2Dmap.js";
+import{searchCities} from "./search.js";
+
 const BREAKPOINT=768;
 let mode = null;
 let globeInstance = null;
 let mapInstance = null;
+
+function setHelpText(){
+    document.getElementById('info-box').textContent =
+    "Spin the globe/Pan the map → Tap a city → Discover local food."
+}
 
 function showGlobe(){
     document.getElementById("map").style.display = "none";
@@ -43,3 +50,5 @@ window.addEventListener('resize', () =>{
 document.getElementById('help-btn').addEventListener('click',()=> {
     document.getElementById('info-box').classList.toggle('hidden');
 });
+
+initSearch(() => (mode==="2d" ? mapInstance.focusCity : globeInstance.focusCity));
