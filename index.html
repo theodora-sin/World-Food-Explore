@@ -24,14 +24,16 @@
     <button id="city-close" aria-label="Close">✕</button>
   </div>
 
-  <div id="top-bar">
-    <input id="search-input" type="text" placeholder = "Search City, dish ,cuisine...">
+<div id="top-bar">
+    <input id="search-input" type="text" placeholder="Search City, dish, cuisine...">
     <button id="surprise-btn">
       <span class="surprise-icon">🎲</span>
       <span class="surprise-text">Surprise Me</span>
     </button>
-    <div id="search-results"> </div>
-  </div>
+    <button id="favorites-btn" aria-label="My Favorites">★</button>
+    <div id="search-results"></div>
+    <div id="favorites-panel"></div>
+</div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -39,5 +41,6 @@
 </body>
 
 </html>
+
 
 
