@@ -1,7 +1,7 @@
 import{ load3DGlobe } from "./3Dglobe.js";
 import{ load2DMap }from "./2Dmap.js";
 import{searchCities} from "./search.js";
-import { getFavoriteCities } from "./favorities.js";
+import { getFavoriteCities } from "./favorites.js";
 import { cityData } from "./cityData.js";
 import { cityData_europe } from "./cityData_europe.js";
 import { cityData_Africa } from "./cityData_africa.js";
