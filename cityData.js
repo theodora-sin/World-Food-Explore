@@ -445,7 +445,7 @@ export const cityData=[
     lat:27.713241,
     lng:85.317364,
     cuisines:[{
-      types:"Himalayan",
+      type:"Himalayan",
       dish_name:"momo",
       course:"Main",
       photoURL:"images/momo.jpg",
