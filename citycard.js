@@ -1,4 +1,4 @@
-import {isFavourite, toggleFavorite} from "./favorites.js";
+import {isFavorite, toggleFavorite} from "./favourites.js";
 export function renderCityCardHTML(city){
     const cuisine= city.cuisines[0];
     return`
@@ -35,7 +35,7 @@ export function renderCityCardHTML(city){
 }
 
 
-export function wireCityCardClose(box){
+export function wireCityCardClose(box,city){
   if(box._outsideClickHandler){
     window.removeEventListener("click", box._outsideClickHandler);
     box._outsideClickHandler = null;
@@ -61,7 +61,7 @@ export function wireCityCardClose(box){
         e.stopPropagation();
         const nowActive = toggleFavorite(city);
         favBtn.textContent = nowActive ?  '★' : '☆';
-        favBtn.classList.toggle('active,', nowActive);
+        favBtn.classList.toggle('active', nowActive);
       };
     }
     function onWindowClick(e){
@@ -71,7 +71,7 @@ export function wireCityCardClose(box){
       box.classList.remove("visible");
       box.style.display ="none";
       box.setAttribute("aria-hidden", "true");
-      window.removeEventListener("click",WindowClick);
+      window.removeEventListener("click",WindowClick); 
       box._outsideClickHandler=null;
     }
     box._outsideClickHandler = onWindowClick;
