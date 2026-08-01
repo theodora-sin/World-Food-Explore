@@ -28,7 +28,7 @@ function showMap(){
     if(!mapInstance){
         mapInstance = load2DMap();
     } else{
-        setTimeout(() => mapInstance.invalidateSize(), 50);
+        setTimeout(() => mapInstance.map.invalidateSize(), 50);
     }
     mode="2d";
     setHelpText();
