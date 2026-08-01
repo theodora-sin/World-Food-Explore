@@ -32,7 +32,7 @@ export function searchCities(getFocusCity){
                 city.name.toLowerCase().includes(q) ||
                 (city.country && city.country.toLowerCase().includes(q)) ||
                 cuisine.dish_name.toLowerCase().includes(q) ||
-                cuisine.cuisine_type.toLowerCase().includes(q)
+                cuisine.toLowerCase().includes(q)
             );
         }).slice(0,8);
         renderResults(matches);
