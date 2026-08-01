@@ -35,7 +35,13 @@ export function renderCityCardHTML(city){
 
 
 export function wireCityCardClose(box){
+  if(box._outsideClickeHandler){
+    window.removeEventListener("click", box._outsideClickeHandler);
+    box._outsideClickeHandler = null;
+  }
+
     document.getElementById("city-close").onclick =() => hide();
+
     function onWindowClick(e){
         if(!box.contains(e.target))hide();
     }
@@ -44,6 +50,8 @@ export function wireCityCardClose(box){
         box.style.display = 'none';
         box.setAttribute("aria-hidden" , "true");
         window.removeEventListener("click", onWindowClick);
+        box._outsideClickerHandler = null;
     }
+    box._outsideClickHandler = onWindowClick;
     setTimeout(() => window.addEventListener("click", onWindowClick), 0);
 }
