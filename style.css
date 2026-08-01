@@ -99,7 +99,7 @@ html,body{
     position:fixed;
     top:24px;
     left:24px;
-    z-index:6000;
+    z-index:5000;
     display:flex;
     gap:10px;
 }
@@ -200,6 +200,69 @@ body.mode-2d #surprise-btn{
 .leaflet-bottom.leaflet-left{
     margin-bottom:40px;
     margin-left:16px;
+}
+
+/* favourite*/
+#favorites-btn{
+    padding: 8px 12px;
+    background:rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: #ffd166;
+    font-size:18px;
+    cursor: pointer;
+}
+#favorites-panel{
+    background:rgba(255,255,255,0.18);
+}
+#favorites-panel{
+    position:absolute;
+    top:48px;
+    right:0;
+    width:260px;
+    background: rgba(0,0,0,0.9);
+    border-radius:8px;
+    padding: 6px 0;
+    display:none;
+    z-index:5000;
+}
+.favourites-empty{
+    padding:12px;
+    color:#aaa;
+    font-size:13px;
+}
+
+/* favorite star inside the city card*/
+#city-favorite{
+    position: absolute;
+    top:8px;
+    right:46px;
+    background: rgba(255,255,255,0.06);
+    border: none;
+    color: #888;
+    height:28px;
+    width:28px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:16px;
+    line-height:1;
+}
+#city-favorite.active{
+    color:#ffd166;
+}
+#city-favorite:hover{
+    background: rgba(255,255,255,0.12);
+}
+.sheet-handle{
+    display:none;
+}
+#city-info.mobile-sheet .sheet-handle{
+    display:block;
+    width:40px;
+    height:4px;
+    background:rgba(255,255,255,0.3);
+    border-radius:2px;
+    margin: 6px auto 10px auto;
 }
 
 #city-close{
