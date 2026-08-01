@@ -21,7 +21,7 @@ export function searchCities(getFocusCity){
         resultsBox.style.display="block";
     }
     input.addEventListener("input",()=>{
-        const q=input.ariaValueMax.trim().toLowerCase();
+        const q=input.value.trim().toLowerCase();
         if(!q){
             renderResults([]);
             return;
