@@ -226,7 +226,7 @@ body.mode-2d #surprise-btn{
     display:none;
     z-index:5000;
 }
-.favourites-empty{
+.favorites-empty{
     padding:12px;
     color:#aaa;
     font-size:13px;
