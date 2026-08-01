@@ -1,4 +1,4 @@
-import {isFavourite, toggleFavorite} from "./favourite.js";
+import {isFavourite, toggleFavorite} from "./favorites.js";
 export function renderCityCardHTML(city){
     const cuisine= city.cuisines[0];
     return`
