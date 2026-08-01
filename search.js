@@ -14,6 +14,7 @@ export function searchCities(getFocusCity){
         }
         resultsBox.innerHTML =matches.map(city=>{
             const cuisine=city.cuisines[0];
+            if(!cuisine) return false;
             return `<div class="search-item" data-name="${city.name}">
                 ${city.name}${city.country ? ', ' + city.country : ''} — ${cuisine.dish_name}
             </div>`;
