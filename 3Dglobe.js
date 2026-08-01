@@ -288,8 +288,8 @@ export function load3DGlobe(){
     }
 
     const padding=12;
-    const boxWidth=320;
-    const boxHeight= 260;
+    const boxWidth=420;
+    const boxHeight= 420;
     let left = coords.x +18;
     let top = coords.y-20;
 
