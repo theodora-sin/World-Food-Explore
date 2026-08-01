@@ -1,7 +1,8 @@
 import Globe from 'https://esm.sh/globe.gl';
 import { cityData } from "./cityData.js";
 import { cityData_europe } from "./cityData_europe.js";
-const allCities = [...cityData, ...cityData_europe];
+import { cityData_Africa } from "./cityData_africa.js";
+const allCities = [...cityData, ...cityData_europe, ...cityData_Africa];
  
 export function load3DGlobe() {
   let hoveredCity = null;
@@ -53,7 +54,7 @@ export function load3DGlobe() {
       el.style.background = 'rgba(0,0,0,0.5)';
       el.style.borderRadius = '6px';
       el.style.border = '1px solid rgba(255,165,0,0.12)';
-      el.style.display = 'none'; // shown only while dragging
+      el.style.display = 'none'; 
       labelLayer.appendChild(el);
  
       el.addEventListener("click", (ev) => {
@@ -307,10 +308,7 @@ export function load3DGlobe() {
     }
     setTimeout(() => window.addEventListener("click", onWindowClick), 0);
   }
-  // NOTE: showCityInfo ends here — no return statement inside it.
-  // focusCity/return for the whole module live below, at the true end
-  // of load3DGlobe(), so main.js actually receives them.
- 
+
   window.addEventListener("keydown", e => {
     if (e.key === "Escape") {
       const box = document.getElementById("city-info");
