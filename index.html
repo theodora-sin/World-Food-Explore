@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-
     <link rel="icon" type="image/png" href="images/favicon_food.png"/>
   </head>
 <body>
@@ -25,10 +24,20 @@
     <button id="city-close" aria-label="Close">✕</button>
   </div>
 
+  <div id="top-bar">
+    <input id="search-input" type="text" placeholder = "Search City, dish ,cuisine...">
+    <button id="suprise-btn">
+      <span class="suprise-icon">🎲</span>
+      <span class="suprise-text">Suprise Me</span>
+    </button>
+    <div id="search-results"> </div>
+  </div>
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script type="module" src="./main.js"></script>
 </body>
 
 </html>
+
 
