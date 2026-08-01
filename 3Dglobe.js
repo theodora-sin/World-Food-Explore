@@ -4,11 +4,11 @@ import { cityData_europe } from "./cityData_europe.js";
 import { cityData_Africa } from "./cityData_africa.js";
 import { isFavorite, toggleFavorite } from "./favorites.js";
 const allCities = [...cityData, ...cityData_europe, ...cityData_Africa];
- 
+
 export function load3DGlobe() {
   let hoveredCity = null;
   const globeElement = document.getElementById("globeViz");
- 
+
   const myGlobe = Globe()
     (globeElement)
     .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
@@ -21,22 +21,22 @@ export function load3DGlobe() {
     .pointColor(() => '#ffa500')
     .pointRadius(0.45)
     .pointAltitude(0.02);
- 
+
   window.addEventListener('resize', () => {
     myGlobe.width(globeElement.clientWidth).height(globeElement.clientHeight);
   });
- 
+
   myGlobe.pointOfView({ lat: 10, lng: 0, altitude: 2.2 }, 0);
- 
+
   const controls = myGlobe.controls();
   if (controls) {
     controls.autoRotate = true;
     controls.autoRotateSpeed = 1;
   }
- 
+
   const labelLayer = document.getElementById("label-layer");
   const labelLines = document.getElementById("label-lines");
- 
+
   function createLabels(data) {
     labelLayer.innerHTML = "";
     data.forEach((d, i) => {
@@ -55,9 +55,9 @@ export function load3DGlobe() {
       el.style.background = 'rgba(0,0,0,0.5)';
       el.style.borderRadius = '6px';
       el.style.border = '1px solid rgba(255,165,0,0.12)';
-      el.style.display = 'none'; 
+      el.style.display = 'none';
       labelLayer.appendChild(el);
- 
+
       el.addEventListener("click", (ev) => {
         ev.stopPropagation();
         const idx = +el.dataset.index;
@@ -66,7 +66,7 @@ export function load3DGlobe() {
     });
   }
   createLabels(allCities);
- 
+
   let isDragging = false;
   function showLabelLayer() {
     labelLayer.style.opacity = "1";
@@ -76,35 +76,35 @@ export function load3DGlobe() {
     while (labelLines.firstChild) labelLines.removeChild(labelLines.firstChild);
   }
   hideLabelLayer();
- 
+
   if (controls) {
     controls.addEventListener("start", () => {
       isDragging = true;
       showLabelLayer();
       schedulePlaceLabels();
     });
- 
+
     controls.addEventListener("end", () => {
       isDragging = false;
       hideLabelLayer();
     });
- 
+
     controls.addEventListener("change", () => {
       if (isDragging) schedulePlaceLabels();
     });
   }
- 
+
   window.addEventListener('resize', () => {
     if (isDragging) schedulePlaceLabels();
   });
- 
+
   let placeLabelsThrottle = null;
   function placeLabels() {
     while (labelLines.firstChild) labelLines.removeChild(labelLines.firstChild);
- 
+
     const labels = [];
     const padding = 10;
- 
+
     allCities.forEach((d, i) => {
       let coords;
       try {
@@ -119,7 +119,7 @@ export function load3DGlobe() {
       if (behindGlobe) return;
       el.style.left = `${coords.x}px`;
       el.style.top = `${coords.y}px`;
- 
+
       const rect = el.getBoundingClientRect();
       labels.push({
         i, el, x: coords.x, y: coords.y,
@@ -127,7 +127,7 @@ export function load3DGlobe() {
         cx: coords.x, cy: coords.y
       });
     });
- 
+
     for (let a = 0; a < labels.length; a++) {
       for (let b = a + 1; b < labels.length; b++) {
         const A = labels[a], B = labels[b];
@@ -154,7 +154,7 @@ export function load3DGlobe() {
         }
       }
     }
- 
+
     const processed = new Set();
     labels.forEach(item => {
       if (item._cluster && !processed.has(item.i)) {
@@ -168,7 +168,7 @@ export function load3DGlobe() {
         item._wasSpiderfied = false;
       }
     });
- 
+
     labels.forEach(l => {
       const moved = Math.hypot(l.x - l.cx, l.y - l.cy) > 2;
       if (moved) {
@@ -183,7 +183,7 @@ export function load3DGlobe() {
       }
     });
   }
- 
+
   function spiderfy(points, centerX, centerY) {
     const n = points.length;
     const radius = 28 + (n - 1) * 6;
@@ -195,7 +195,7 @@ export function load3DGlobe() {
       p.el.style.top = `${p.y}px`;
     });
   }
- 
+
   function schedulePlaceLabels() {
     if (placeLabelsThrottle) return;
     placeLabelsThrottle = setTimeout(() => {
@@ -203,21 +203,21 @@ export function load3DGlobe() {
       placeLabelsThrottle = null;
     }, 80);
   }
- 
+
   schedulePlaceLabels();
- 
+
   if (controls) {
     controls.addEventListener("change", () => schedulePlaceLabels());
   }
   window.addEventListener('resize', () => schedulePlaceLabels());
- 
+
   const originalPointOfView = myGlobe.pointOfView;
   myGlobe.pointOfView = function (coords, ms) {
     const ret = originalPointOfView.call(this, coords, ms);
     setTimeout(() => schedulePlaceLabels(), (ms || 0) + 60);
     return ret;
   };
- 
+
   myGlobe.onPointHover(point => {
     hoveredCity = point;
     myGlobe
@@ -226,7 +226,7 @@ export function load3DGlobe() {
       .pointAltitude(d => d === hoveredCity ? 0.04 : 0.02);
     globeElement.style.cursor = point ? 'pointer' : "default";
   });
- 
+
   myGlobe.onPointClick(point => {
     if (!point) return;
     if (!point.cuisines || !point.cuisines.length) {
@@ -236,31 +236,33 @@ export function load3DGlobe() {
     myGlobe.pointOfView({ lat: point.lat, lng: point.lng, altitude: 1.5 }, 700);
     setTimeout(() => showCityInfo(point), 650);
   });
- 
+
   function showCityInfo(city) {
     const box = document.getElementById('city-info');
     const cuisine = city.cuisines[0];
+    const favActive = isFavorite(city); // ← ADDED
     box.innerHTML = `
       <button id="city-close" aria-label="Close">✕</button>
+      <button id="city-favorite" aria-label="Toggle favorite" class="${favActive ? 'active' : ''}">${favActive ? '★' : '☆'}</button>
       ${cuisine.photoURL ? `<img class="dish-img" src="${cuisine.photoURL}" alt="${cuisine.dish_name}">` : ''}
       <h3>${city.name}${city.country ? ', ' + city.country : ''}</h3>
       <div class="field">
         <span class="label">Dish</span>
         <span class="value dish">${cuisine.dish_name}</span>
       </div>
- 
+
       <div class="field">
         <span class="label">Cuisine</span>
         <span class="value">${cuisine.type}</span>
       </div>
- 
+
       <div class="field">
         <span class="label">Meal Type</span>
         <span class="value">${cuisine.course}</span>
       </div>
- 
+
       <div class="desc">${cuisine.description}</div>
- 
+
       <div class="recs-heading">Where to try it</div>
       ${cuisine.recommendations.map(r => `
         <div class="rec">
@@ -277,36 +279,37 @@ export function load3DGlobe() {
       const rect = globeElement.getBoundingClientRect();
       coords = { x: rect.width / 2, y: rect.height / 2 };
     }
- 
+
     const padding = 12;
     const boxWidth = 420;
     const boxHeight = 420;
     let left = coords.x + 18;
     let top = coords.y - 20;
- 
+
     const vw = window.innerWidth;
     if (left + boxWidth + padding > vw) left = coords.x - boxWidth - 18;
     if (left < padding) left = padding;
- 
+
     const vh = window.innerHeight;
     if (top + boxHeight + padding > vh) top = vh - boxHeight - padding;
     if (top < padding) top = padding;
- 
+
     box.style.left = `${left}px`;
     box.style.top = `${top}px`;
     box.style.display = "block";
     box.setAttribute("aria-hidden", "false");
- 
+
     document.getElementById("city-close").onclick = () => hideCityInfo();
 
+
     const favBtn = document.getElementById("city-favorite");
-    if(favBtn){
-      favBtn.onclick =(e) =>{
+    if (favBtn) {
+      favBtn.onclick = (e) => {
         e.stopPropagation();
         const nowActive = toggleFavorite(city);
         favBtn.textContent = nowActive ? '★' : '☆';
         favBtn.classList.toggle('active', nowActive);
-      }
+      };
     }
 
     function onWindowClick(e) {
@@ -326,11 +329,11 @@ export function load3DGlobe() {
       if (box) { box.style.display = 'none'; box.setAttribute('aria-hidden', 'true'); }
     }
   });
- 
+
   function focusCity(city) {
     myGlobe.pointOfView({ lat: city.lat, lng: city.lng, altitude: 1.5 }, 700);
     setTimeout(() => showCityInfo(city), 650);
   }
- 
+
   return { globe: myGlobe, focusCity };
 }
