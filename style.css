@@ -28,7 +28,8 @@ html,body{
 
 #info-box{
     position:fixed;
-    top: 16px; right: 16px;
+    top: 16px; 
+    right: 16px;
     background: rgba(0,0,0,0.75);
     color:#eee;
     padding: 8px 12px;
@@ -72,10 +73,13 @@ html,body{
 #city-info.mobile-sheet.visible{
     transform: translateX(-50%) translateY(0);
 }
+
+
+/*help button*/
 #help-btn{
     position: fixed;
-    top:16px;
-    right:16px;
+    top:24px;
+    right:24px;
     z-index: 5000;
     width:32px;
     height:32px;
@@ -97,21 +101,18 @@ html,body{
     left:24px;
     z-index:5000;
     display:flex;
-    gap:8px;
+    gap:10px;
 }
 #search-input{
-    width:220px;
-    padding: 8px 10px;
-    border-radius:6px;
+    border-radius:8px;
     border:none;
     outline:none;
-    font-size: 14px;
 }
 #surprise-btn{
     padding:8px 12px;
     background: #ffa500;
     border:none;
-    border-radius:6px;
+    border-radius:8px;
     cursor:pointer;
     font-weight:600;
 }
@@ -123,7 +124,7 @@ html,body{
     position:absolute;
     top:40px;
     left:0;
-    width:220px;
+    width:100%;
     background:rgba(0,0,0,0.85);
     border-radius: 6px;
     padding: 6px 0;
@@ -131,13 +132,36 @@ html,body{
     z-index:5000;
 }
 .search-item{
-    padding:6px 10px;
+    padding:8px 12px;
     cursor:pointer;
     color:#fff;
     font-size:14px;
 }
 .search-item:hover{
     background:rgba(255,255,255,0.1);
+}
+
+body.mode-3d #search-results{
+    width:320px;
+    font-size:17px;
+    padding:14px 16px;
+}
+body.mode-3d #surprise-btn{
+    padding:14px 20px;
+    font-size:17px;
+}
+body.mode-2d #top-bar{
+    top:16px;
+    left:60px;
+}
+body.mode-2d #search-input{
+    width:200px;
+    padding:10px 12px;
+    font-size:16px;
+}
+body.mode-2d #surprise-btn{
+    padding:10px 14px;
+    font-size:16px;
 }
 
 #city-close{
