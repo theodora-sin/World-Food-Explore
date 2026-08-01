@@ -324,6 +324,11 @@ export function load3DGlobe(){
       box.setAttribute("aria-hidden", "true");
       window.removeEventListener("click", onWindowClick);
     }
+    function focusCity(city){
+      myGlobe.pointOfView({lat: city.lat, lng:city.lng, altitude:1.5},700);
+      setTime(() => showCityInfo(city), 650);
+    }
+    return { globe:myGlobe, focusCity};
   }
 
   window.addEventListener("keydown", e=> {
