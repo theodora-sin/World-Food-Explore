@@ -54,7 +54,7 @@ export function load2DMap() {
     box.style.display = "block";
     box.setAttribute("aria-hidden", "false");
     requestAnimationFrame(() => box.classList.add('visible'));
-    wireCityCardClose(box);
+    wireCityCardClose(box,city);
   }
  
   function focusCity(city) {
