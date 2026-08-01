@@ -303,4 +303,99 @@ export const cityData_europe = [
         }]
     }]
 },
+  {
+    name:"Istanbul",
+    country:"Turkiye",
+    lat:41.053975,
+    lng:28.994357,
+    cuisines:[{
+        type:"Turkish",
+        dish_name:" Hünkar Beğendi",
+        course: "Main",
+        photoURL:"images/hunkar.jpg",
+        description:"A rich lamb stew served over a smoky, creamy roasted eggplant puree.",
+        recommendations:[{
+            name:"Hünkar ",
+            priceRange:"$$$",
+            address:"Harbiye, Mim Kemal Öke Cd. No:21, 34271 Şişli/İstanbul, Türkiye",
+            link:"https://www.google.com/maps/place/H%C3%BCnkar/@41.0493729,28.9911086,11z/data=!4m10!1m2!2m1!1zSMO8bmthciA!3m6!1s0x14cab70cf6354acf:0xab4acb522c55e287!8m2!3d41.0495013!4d28.9911432!15sCgdIw7xua2FyWgkiB2jDvG5rYXKSARJ0dXJraXNoX3Jlc3RhdXJhbnTgAQA!16s%2Fm%2F03qfvv1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Sofia",
+    country:"Bulgaria",
+    lat:42.696937,
+    lng:23.319817,
+    cuisines:[{
+        type:"Bulgarian",
+        dish_name:"Tarator",
+        course: "Starter",
+        photoURL:"images/tarator.jpg",
+        description:"A cold, refreshing mix of yogurt, garlic, dill, and cucumbers ideal for changing warm seasons.",
+        recommendations:[{
+            name:"Supa Star,",
+            priceRange:"$",
+            address:"Sofia Center, ul.Tsar Shishman 8, 1000 Sofia, Bulgaria",
+            link:"https://www.google.com/maps/place/Supa+Star/@42.6974588,23.3210563,15z/data=!3m1!5s0x40aa8574740f077f:0x7b3fd869623bf2e4!4m10!1m2!2m1!1sSupa+Star,!3m6!1s0x40aa85747409d383:0xa8f72444d035c981!8m2!3d42.6926808!4d23.3311247!15sCgpTdXBhIFN0YXIsWgsiCXN1cGEgc3RhcpIBCnJlc3RhdXJhbnTgAQA!16s%2Fg%2F1pp2tgpnr?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Budapest",
+    country:"Hungary",
+    lat:47.497913,
+    lng:19.040236,
+    cuisines:[{
+        type:"Hungarian",
+        dish_name:"Gulyás",
+        course: "Main",
+        photoURL:"images/gulyas.webp",
+        description:"A rich, slow-cooked soup made with tender beef, root vegetables, onions, and plenty of sweet Hungarian paprika. ",
+        recommendations:[{
+            name:"Gettó Gulyás",
+            priceRange:"$$",
+            address:"Budapest, Wesselényi utca 18, 1077 Hungary",
+            link:"https://www.google.com/maps/place/Gett%C3%B3+Guly%C3%A1s/@47.4973947,19.0520963,15z/data=!3m1!4b1!4m6!3m5!1s0x4741dc682437bf65:0xc2b6eb4e3531cdd4!8m2!3d47.4973807!4d19.062396!16s%2Fg%2F11cm0q4sqp?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Zagreb",
+    country:"Croatia",
+    lat:45.815456,
+    lng:15.980546,
+    cuisines:[{
+        type:"Croatian",
+        dish_name:"Štrukli",
+        course: "Main",
+        photoURL:"images/strukli.jpg",
+        description:"A warm, comforting dough pastry filled with fresh cottage cheese and sour cream, baked or boiled.",
+        recommendations:[{
+            name:"La Štruk,",
+            priceRange:"$$",
+            address:"Skalinska ul. 5, 10000, Zagreb, Croatia",
+            link:"https://www.google.com/maps/place/La+%C5%A0truk/@45.8148547,15.9767932,17z/data=!3m1!4b1!4m6!3m5!1s0x4765d7027a3e51e9:0x65e5d675c5f66ba2!8m2!3d45.8148547!4d15.9767932!16s%2Fg%2F11byflh_md?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Rome",
+    country:"Italy",
+    lat:41.897069,
+    lng:12.483437,
+    cuisines:[{
+        type:"Italian",
+        dish_name:"Amatriciana",
+        course: "Main",
+        photoURL:"images/pasta.jpg",
+        description:"Bucatini or rigatoni served in a rich tomato sauce with crispy guanciale and pecorino.",
+        recommendations:[{
+            name:"Grotta Amatriciana",
+            priceRange:"$$",
+            address:"V. Principe Amedeo, 1c, 00184 Roma RM, Italy",
+            link:"https://www.google.com/maps/place/Grotta+Amatriciana/@41.8948969,12.4817003,14z/data=!4m10!1m2!2m1!1sTrattoria+Grotta+!3m6!1s0x132f619cc0752fdb:0x1363a2d44420ef30!8m2!3d41.9006902!4d12.4969456!15sChBUcmF0dG9yaWEgR3JvdHRhWhIiEHRyYXR0b3JpYSBncm90dGGSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11zjvvbvc7?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
 ]
