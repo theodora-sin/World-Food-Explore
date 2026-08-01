@@ -90,6 +90,56 @@ html,body{
     display:none;
 }
 
+/*Top bar*/
+#top-bar{
+    position:fixed;
+    top:24px;
+    left:24px;
+    z-index:5000;
+    display:flex;
+    gap:8px;
+}
+#search-input{
+    width:220px;
+    padding: 8px 10px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    font-size: 14px;
+}
+#surprise-btn{
+    padding:8px 12px;
+    background: #ffa500;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+}
+#surprise-btn:hover{
+    background:#ffb733;
+}
+
+#search-results{
+    position:absolute;
+    top:40px;
+    left:0;
+    width:220px;
+    background:rgba(0,0,0,0.85);
+    border-radius: 6px;
+    padding: 6px 0;
+    display:none;
+    z-index:5000;
+}
+.search-item{
+    padding:6px 10px;
+    cursor:pointer;
+    color:#fff;
+    font-size:14px;
+}
+.search-item:hover{
+    background:rgba(255,255,255,0.1);
+}
+
 #city-close{
     position:absolute;
     top:8px;
