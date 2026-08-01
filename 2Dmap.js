@@ -1,6 +1,10 @@
 import { cityData } from "./cityData.js";
 import { cityData_europe } from "./cityData_europe.js";
+import { cityData_Africa } from "./cityData_africa.js";
 import { renderCityCardHTML, wireCityCardClose } from "./citycard.js";
+const allCities = [...cityData, ...cityData_europe, ...cityData_Africa];
+
+
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
@@ -29,7 +33,7 @@ export function load2DMap() {
     spiderfyOnMaxZoom: true
   });
  
-  [...cityData, ...cityData_europe].forEach(city => {
+  allCities.forEach(city => {
     if (typeof city.lat !== "number" || typeof city.lng !== 'number') {
       console.warn(`Skipping ${city.name} — invalid lat/lng`, city);
       return;
