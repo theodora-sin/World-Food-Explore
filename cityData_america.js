@@ -284,4 +284,99 @@ export const cityData_america=[
         }]
     }]
 },
+{
+    name:"San José",
+    country:"Costa Rica",
+    lat:9.929867,
+    lng:-84.088123,
+    cuisines:[{
+        type:"Caribbean",
+        dish_name:"Gallo Pinto",
+        course: "Breakfast",
+        photoURL:"images/gallo_pinto",
+        description:"A breakfast staple of mixed rice and black beans seasoned with onions, peppers, and distinctive Salsa Lizano.",
+        recommendations:[{
+            name:"Soda Tala",
+            priceRange:"$",
+            address:"WWM9+W64, Av. Central, San José, Paso De La Vaca, Costa Rica",
+            link:"https://www.google.com/maps/place/Soda+Tala+%231/@9.9347904,-84.0922372,15z/data=!3m1!4b1!4m6!3m5!1s0x8fa0e35e69b7790f:0x3efb66c1da479baa!8m2!3d9.9347694!4d-84.0819375!16s%2Fg%2F11g9jp8mym?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Panama City",
+    country:"Panama",
+    lat:8.983281,
+    lng:-79.521846,
+    cuisines:[{
+        type:"Caribbean",
+        dish_name:"Sancocho",
+        course: "Main",
+        photoURL:"images/sancocho.jpg",
+        description:"A rich, comforting soup made with free-range hen, corn, yucca, and the local herb culantro",
+        recommendations:[{
+            name:"El Trapiche",
+            priceRange:"$$",
+            address:"Vía Argentina, Panamá, Provincia de Panamá, Panama",
+            link:"https://www.google.com/maps/place/El+Trapiche/@8.9889261,-79.5534838,13z/data=!4m10!1m2!2m1!1sEl+Trapiche!3m6!1s0x8faca8fa6aac0723:0x818612fd251c20f!8m2!3d8.9889261!4d-79.5251489!15sCgtFbCBUcmFwaWNoZSIDiAEBWg0iC2VsIHRyYXBpY2hlkgEKcmVzdGF1cmFudJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQydDBWRkY2VG0xT1NGWkdZV3BDV21ReVRrUlRhemxZVDBSU1YyRldSUkFC4AEA-gEECAAQTA!16s%2Fg%2F12qf54y_n?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Bogotá",
+    country:"Colombia",
+    lat:4.695924,
+    lng:-74.091324,
+    cuisines:[{
+        type:"	Latin American",
+        dish_name:"Ajiaco Santafereño",
+        course: "Main",
+        photoURL:"images/bogota.jpg",
+        description:"A thick and comforting soup made with chicken, three types of potatoes, and guasca, served with cream, capers, rice, and avocado on the side.",
+        recommendations:[{
+            name:"Ajiaco Don Santicos,",
+            priceRange:"$$",
+            address:"Centro Comercial Belmira Plaza, Cl. 140a # 7a - 17, Bogotá, Cundinamarca, Colombia",
+            link:"https://www.google.com/maps/place/Ajiaco+Don+Santicos/@4.7168315,-74.0398531,15z/data=!3m1!4b1!4m6!3m5!1s0x8e3f8ff7dce0bd6d:0x977a068d6353a982!8m2!3d4.7168102!4d-74.0295534!16s%2Fg%2F1pty4jywv?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Lima",
+    country:"Peru",
+    lat:-12.047836,
+    lng:-77.043198,
+    cuisines:[{
+        type:"Latin American",
+        dish_name:"Ceviche",
+        course: "Main",
+        photoURL:"images/ceviche.webp",
+        description:"Raw fish cured in fresh lime juice, mixed with red onions, chili peppers, and served with sweet potato and corn.",
+        recommendations:[{
+            name:"La Mar Cevichería Peruana",
+            priceRange:"$$",
+            address:"Av. Mariscal La Mar 770, Miraflores 15074, Peru",
+            link:"https://www.google.com/maps/place/La+Mar+Cevicher%C3%ADa+Peruana/@-12.1132959,-77.0556153,15z/data=!3m1!4b1!4m6!3m5!1s0x9105c8375a2cd665:0x39a8ecc6a893c91a!8m2!3d-12.1133171!4d-77.0453156!16s%2Fg%2F1v_s6ypy?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Santiago",
+    country:"Chile",
+    lat:-33.455960,
+    lng:-70.670308,
+    cuisines:[{
+        type:"South American",
+        dish_name:"Pastel de Choclo",
+        course: "Main",
+        photoURL:"images/choclo.jpg",
+        description:"A savory baked casserole with a base of ground beef or chicken, onions, hard-boiled eggs, and raisins, all topped with a thick, slightly sweet mashed corn crust",
+        recommendations:[{
+            name:"Panchita",
+            priceRange:"$$",
+            address:"Av. Nueva Costanera 3979, 7630268 Vitacura, Región Metropolitana, Chile",
+            link:"https://www.google.com/maps/place/Panchita/@-33.4589242,-70.8309682,11z/data=!4m10!1m2!2m1!1sPanchita!3m6!1s0x9662cfe8f6df9f3d:0x3697a17c33501e74!8m2!3d-33.397429!4d-70.59735!15sCghQYW5jaGl0YSIDiAEBWgoiCHBhbmNoaXRhkgETcGVydXZpYW5fcmVzdGF1cmFudOABAA!16s%2Fg%2F11h7cwv3y7?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
 ]
