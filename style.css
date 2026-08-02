@@ -577,7 +577,7 @@ body.mode-2d #surprise-btn{
     justify-content:space-between;
     align-items:center;
     padding:6px 16px;
-    background: rgba(255,255,255,0.4);
+    background: rgba(0, 0, 0, 0.4);
     z-index:1;
     pointer-events:none;
 }
@@ -586,9 +586,6 @@ body.mode-2d #surprise-btn{
     color:#777;
 }
 .footer-chars{
-    display:flex;
-    align-items:center;
-    gap:6px;
     width:auto;
     height:32px;
     opacity:0.9;
