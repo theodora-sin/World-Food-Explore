@@ -66,7 +66,10 @@ document.getElementById('help-btn').addEventListener('click',()=> {
     document.getElementById('info-box').classList.toggle('hidden');
 });
 
-searchCities(() => (mode==="2d" ? mapInstance.focusCity : globeInstance.focusCity));
+searchCities(
+    () => (mode==="2d" ? mapInstance.focusCity : globeInstance.focusCity),
+    () => (mode==="2d" ? null: globeInstance?.surpriseFocus)
+);
 
 const favBtn = document.getElementById('favorites-btn');
 const favPanel= document.getElementById('favorites-panel');
