@@ -601,7 +601,7 @@ body.mode-3d .start-char{
     height:180px;
 }
 body.mode-3d .start-instructions{
-    font: size 16px;
+    font-size: 16px;
 }
 body.mode-3d #start-btn{
     padding: 18px 36px;
