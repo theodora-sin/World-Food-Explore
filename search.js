@@ -71,7 +71,7 @@ export function searchCities(getFocusCity, getSurpriseFocus) {
     if(!validCities.length) return;
     const randomCity = validCities[Math.floor(Math.random() * validCities.length)];
 
-    const surpriseFocus = getSurpriseFocus ? getSurpriseFoucs() : null;
+    const surpriseFocus = getSurpriseFocus ? getSurpriseFocus() : null;
     const focusCity = getFocusCity();
     const fn = typeof surpriseFocus === 'function' ? surpriseFocus : focusCity;
     
@@ -80,7 +80,8 @@ export function searchCities(getFocusCity, getSurpriseFocus) {
       return;
     }
     fn(randomCity);
-    inout.value = '';
+    input.value = '';
     renderResults([]);
   });
 }
+
