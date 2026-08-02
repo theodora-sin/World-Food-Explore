@@ -3,7 +3,7 @@ import { cityData_europe } from "./cityData_europe.js";
 import { cityData_Africa } from "./cityData_africa.js";
 import { cityData_america} from "./cityData_america.js";
 
-const allCities = [...cityData, ...cityData_europe, ...cityData_Africa];
+const allCities = [...cityData, ...cityData_europe, ...cityData_Africa, ...cityData_america];
  
 export function searchCities(getFocusCity) {
   const input = document.getElementById('search-input');
