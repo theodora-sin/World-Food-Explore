@@ -587,8 +587,8 @@ body.mode-2d #near-me-btn{
     position:fixed;
     top:auto;
     bottom:40px;
-    left:50%;
-    transform: translateX(-50%);
+    left:90px;
+    transform: none;
     z-index:4500;
 }
 
@@ -614,9 +614,11 @@ body.mode-2d #near-me-btn{
         top:70px;
     }
     body.mode-2d #near-me-btn{
-        bottom:34px;
+        bottom:40px;
+        left:70px;
+        transform:none;
         padding:6px 10px;
-        font: size 12px;
+        font-size:12px;
     }
     .start-char{height:90px;}
     .start-content h1{font-size:22px;}
