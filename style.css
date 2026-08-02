@@ -667,13 +667,13 @@ body.mode-2d #near-me-btn{
  
 body.mode-3d #help-btn,
 body.mode-3d #history-btn{
-    width:44px;
-    height:44px;
-    font-size:20px;
+    width: clamp(36px, 3vw, 56px);
+    height: clamp(36px, 3vw, 56px);
+    font-size: clamp(16px, 1.5vw, 24px);
 }
 body.mode-3d .timeline-item{
-    padding:10px 18px;
-    font-size:15px;
+    padding: clamp(8px, 0.8vw, 14px) clamp(14px, 1.2vw, 22px);
+    font-size: clamp(13px, 0.9vw, 17px);
 }
 body.mode-3d .timeline-num{
     font-size:15px;
@@ -697,7 +697,19 @@ body.mode-3d #start-btn{
     padding: 18px 36px;
     font-size:18px;
 }
+body.mode-3d #surprise-btn,
 body.mode-3d #near-me-btn{
-    padding:14px 20px;
-    font-size:17px;
+    padding: clamp(12px, 1vw, 18px) clamp(16px, 1.5vw, 26px);
+    font-size: clamp(15px, 1vw, 20px);
+}
+body.mode-3d #search-input{
+    width: clamp(280px, 22vw, 480px);
+    font-size: clamp(15px, 1vw, 20px);
+    padding: clamp(12px, 1vw, 18px) clamp(14px, 1.2vw, 20px);
+}
+body.mode-3d .footer-char{
+    height: clamp(28px, 3vw, 48px);
+}
+body.mode-3d .footer-credit{
+    font-size: clamp(11px, 0.7vw, 14px);
 }
