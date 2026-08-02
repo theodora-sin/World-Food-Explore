@@ -175,3 +175,60 @@ if(historyBtn && timelineStrip){
         }
     });
 }
+function distanceKm(lat1, lng1, lat2, lng2) {
+  const R = 6371; // Earth's radius in km
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+const nearMeBtn = document.getElementById('near-me-btn');
+if (nearMeBtn) {
+  const originalLabel = nearMeBtn.textContent;
+
+  nearMeBtn.addEventListener('click', () => {
+    if (!navigator.geolocation) {
+      alert("Your browser doesn't support location — try searching instead!");
+      return;
+    }
+
+    nearMeBtn.disabled = true;
+    nearMeBtn.textContent = 'Locating…';
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+
+        let nearest = null;
+        let nearestDist = Infinity;
+        allCities.forEach((city) => {
+          if (typeof city.lat !== 'number' || typeof city.lng !== 'number') return;
+          const d = distanceKm(latitude, longitude, city.lat, city.lng);
+          if (d < nearestDist) {
+            nearestDist = d;
+            nearest = city;
+          }
+        });
+
+        nearMeBtn.disabled = false;
+        nearMeBtn.textContent = originalLabel;
+
+        if (nearest) {
+          const focusCity = mode === "2d" ? mapInstance?.focusCity : globeInstance?.focusCity;
+          if (typeof focusCity === 'function') focusCity(nearest);
+        }
+      },
+      (error) => {
+        nearMeBtn.disabled = false;
+        nearMeBtn.textContent = originalLabel;
+        console.warn('Geolocation failed:', error.message);
+        alert("Couldn't get your location — check your browser's location permission and try again.");
+      },
+      { timeout: 10000 }
+    );
+  });
+}
