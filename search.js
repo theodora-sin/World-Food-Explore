@@ -81,3 +81,22 @@ export function searchCities(getFocusCity) {
     renderResults([]);
   });
 }
+export function searchCities(getFocusCity, getSurpriseFocus){
+  surpriseBtn. addEventListener('click',() =>{
+    const validCities = allCities.filter(c => c.cuisines&& c.cuisines[0]);
+    if(!validCities.length) return;
+    const randomCity = validCities[Math.floor(Math.random() * validCities.length)];
+
+    const surpriseFocus = getSurpriseFocus ? getSurpriseFoucs() : null;
+    const focusCity = getFocusCity();
+
+    const fn = typeof surpriseFocus === 'function' ? surpriseFocus : focusCity;
+    if(typeof fn !== 'function'){
+      console.warn('No focus function ready yet');
+      return;
+    }
+    fn(randomCity);
+    inout.value = '';
+    renderResults([]);
+  })
+}
