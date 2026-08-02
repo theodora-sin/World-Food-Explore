@@ -189,4 +189,99 @@ export const cityData_america=[
         }]
     }]
 },
+{
+    name:"Havana",
+    country:"Cuba",
+    lat:23.134653,
+    lng:-82.359759,
+    cuisines:[{
+        type:"Cuban",
+        dish_name:"Ropa Vieja",
+        course: "Main",
+        photoURL:"images/ropa_vieja.jpg",
+        description:"Shredded beef slow-cooked until very tender in a rich tomato, garlic, onion, and bell pepper sauce",
+        recommendations:[{
+            name:"Paladar Doña Eutimia",
+            priceRange:"$$",
+            address:"60-C, Callejon del Chorro, La Habana, Cuba",
+            link:"https://www.google.com/maps/place/Paladar+Do%C3%B1a+Eutimia/@23.1403745,-82.3623811,15z/data=!3m1!4b1!4m6!3m5!1s0x88cd79aee0a0cab5:0xfb2822ee344c1059!8m2!3d23.1403551!4d-82.3521028!16s%2Fg%2F12hn3dpp4?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Santo Domingo",
+    country:"Dominican Republic",
+    lat:18.467715,
+    lng:-69.933331,
+    cuisines:[{
+        type:"Dominican",
+        dish_name:"La Bandera",
+        course: "Main",
+        photoURL:"images/la_bandera.jpg",
+        description:"It features white rice, red beans, and meat (usually stewed beef or chicken), served alongside fried plantains (tostones) and a side salad",
+        recommendations:[{
+            name:" La Rambla Santo Domingo",
+            priceRange:"$$$",
+            address:"C. César Nicolás Penson No. 157, Santo Domingo 10107, Dominican Republic",
+            link:"https://www.google.com/maps/place/La+Rambla+Bistro+Grill/@18.4684656,-69.9294963,15z/data=!3m1!4b1!4m6!3m5!1s0x8eaf89d9f52416d1:0xb9d4978fe1bbc693!8m2!3d18.4684455!4d-69.919218!16s%2Fg%2F11dxf4synp?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Mexico City",
+    country:"Mexico",
+    lat:19.432614,
+    lng:-99.135972,
+    cuisines:[{
+        type:"Mexican",
+        dish_name:"Al pastor",
+        course: "Main",
+        photoURL:"images/el_Vilsito.jpg",
+        description:"It uses a marinade of dried chilies, spices, and achiote, and is cooked on a vertical rotisserie with pineapple",
+        recommendations:[{
+            name:"El Vilsito",
+            priceRange:"$",
+            address:"Petén 248 y, Av. Universidad, Narvarte Poniente, Benito Juárez, 03020 Ciudad de México, CDMX, Mexico",
+            link:"https://www.google.com/maps/place/El+Vilsito/@19.3893541,-99.1630933,15z/data=!3m1!4b1!4m6!3m5!1s0x85d1ff06ebdada0d:0xe8525eb674e5e516!8m2!3d19.3893341!4d-99.1527936!16s%2Fg%2F1tdn4fm0?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Belize City",
+    country:"Belize",
+    lat:17.504633,
+    lng:-88.196422,
+    cuisines:[{
+        type:"Belizean",
+        dish_name:"Fry Jacks",
+        course: "Breakfast",
+        photoURL:"images/fry_jacks.jpg",
+        description:"Puffed, deep-fried pieces of dough eaten hot for breakfast, often stuffed with eggs, beans, cheese, or meat, or drizzled with honey.",
+        recommendations:[{
+            name:"Jenny's grab and go!",
+            priceRange:"$",
+            address:"Avenida Langosta, Caye Caulker, Belize",
+            link:"https://www.google.com/maps/place/Jenny's+grab+and+go!/@17.7424129,-88.0337826,15.28z/data=!4m10!1m2!2m1!1sJenny's+belize+city!3m6!1s0x8f5c8de489fabf83:0xd60ad129bc8dcf35!8m2!3d17.7435701!4d-88.0248642!15sChNKZW5ueSdzIGJlbGl6ZSBjaXR5WhUiE2plbm55J3MgYmVsaXplIGNpdHmSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11d_281j45?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"San Pedro Sula",
+    country:"Honduras",
+    lat:15.506827,
+    lng:-88.025403,
+    cuisines:[{
+        type:"Honduran",
+        dish_name:"Baleadas",
+        course: "Breakfast",
+        photoURL:"images/baleadas.jpg",
+        description:"A thick, folded wheat flour tortilla filled with refried red beans, crumbled salty white cheese, and a creamy local sour cream. Special versions add eggs, avocado, or meat.",
+        recommendations:[{
+            name:"Estelinas",
+            priceRange:"$$",
+            address:"3 Calle SO, 21104 San Pedro Sula, Cortés, Honduras",
+            link:"https://www.google.com/maps/place/Estelinas/@15.504235,-88.0361256,15z/data=!3m1!4b1!4m6!3m5!1s0x8f665b13350cf6a9:0x20d1ecb0b32553d3!8m2!3d15.5042146!4d-88.0258259!16s%2Fg%2F11j110d46d?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
 ]
