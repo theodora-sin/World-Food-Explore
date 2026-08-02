@@ -238,7 +238,12 @@ body.mode-2d #surprise-btn{
     border-radius:2px;
     margin: 6px auto 10px auto;
 }
- 
+#city-info.mobile-sheet{
+    padding-bottom: calc(20px+ env(safe-area-inset-bottom));
+    max-height:55vh;
+    max-height:55dvh;
+}
+
 #city-close{
     position:absolute;
     top:8px;
@@ -294,6 +299,9 @@ body.mode-2d #surprise-btn{
 }
 #city-info .rec strong{
     font-size: 16px;
+}
+#city-info.mobile-sheet .rec:last-child{
+    margin-bottom:12px;
 }
 #city-info .price{
     color:#87e787;
@@ -613,7 +621,7 @@ body.mode-2d #near-me-btn{
     .start-instructions li{ font-size: 13px; }
  
     #city-info.mobile-sheet{
-        max-height:55vh;
+        max-height:55dvh;
         padding:12px 14px 20px 14px;
         font-size:13px;
         overflow-y:auto;
