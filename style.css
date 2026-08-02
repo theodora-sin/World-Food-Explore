@@ -536,6 +536,61 @@ body.mode-2d #surprise-btn{
     cursor: wait;
 }
 
+.empty-state{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:20px 16px;
+    gap: 10px;
+}
+.empty-mascot{
+    height: 64px;
+    width: auto;
+    opacity: 0.9;
+}
+.empty-state p{
+    color:#aaa;
+    font-size:13px;
+    margin:0;
+}
+.empty-state-inline{
+    flex-direction:row;
+    padding: 4px 12px;
+    gap:8px;
+}
+.empty-mascot-small{
+    height:28px;
+    width:auto;
+}
+.empty-state-inline span{
+    color:#888;
+    font-size:12px;
+    white-space:nowrap;
+}
+#site-footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:6px 16px;
+    background: rgba(0,0,0,0.4);
+    z-index:1;
+    pointer-events:none;
+}
+.footer-doodles{
+    font-size:14px;
+    opacity:0.6;
+    letter-spacing:4px;
+}
+.footer-credit{
+    font-size:11px;
+    color:#777;
+}
+
 @media (max-width:480px){
     .start-char{height:90px};
     .start-content h1{font-size:22px;}
@@ -570,7 +625,11 @@ body.mode-2d #surprise-btn{
         top:0;
         z-index:10;
     }
+    #site-footer{
+        display:none
+    }
 }
+
 body.mode-3d #help-btn,
 body.mode-3d #history-btn{
     width:44px;
