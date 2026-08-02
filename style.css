@@ -44,6 +44,8 @@ html,body{
     position:absolute;
     min-width:360px;
     max-width:420px;
+    max-height:80vh;
+    max-height:80dvh;
     background:rgba(0,0,0,0.85);
     color:#fff;
     padding:20px 22px;
