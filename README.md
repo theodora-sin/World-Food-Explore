@@ -1,6 +1,6 @@
 ## World Food Explorer🌍🍜
 An easy-to-use interactive world food finder:
-Spin the globe 3D on desktop and zoom into the map 2D on mobile; select any city, and a food tab will appear showing recommended authentic food and a restaurant.
+Spin the globe 3D on desktop or zoom into the map 2D on mobile; select any city, and a food tab will appear showing recommended authentic food and a restaurant.
 
 
 ## Live demo:
