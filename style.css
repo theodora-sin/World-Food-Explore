@@ -590,8 +590,8 @@ body.mode-2d #surprise-btn{
     align-items:center;
     gap:6px;
     width:auto;
-    height:32px
-    opacity:0.9
+    height:32px;
+    opacity:0.9;
 }
 .footer-char1{
     transform: scaleX(-1);
