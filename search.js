@@ -9,7 +9,16 @@ export function searchCities(getFocusCity, getSurpriseFocus) {
   const resultsBox = document.getElementById('search-results');
   const surpriseBtn = document.getElementById('surprise-btn');
  
-  function renderResults(matches) {
+  function renderResults(matches, hasQuery) {
+    if(!hasQuery){
+      resultsBox.innerHTML = `
+      <div class="empty-state">
+        <img src="images/character3.png" class="empty-mascot" alt="">
+        <p>No matches — try a different city, dish, or cuisine.</p>
+      </div>`;
+      resultsBox.style.display='block';
+      return;
+    }
     if (!matches.length) {
       resultsBox.style.display = 'none';
       resultsBox.innerHTML = '';
@@ -27,7 +36,7 @@ export function searchCities(getFocusCity, getSurpriseFocus) {
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
     if (!q) {
-      renderResults([]);
+      renderResults([], false);
       return;
     }
     const matches = allCities.filter(city => {
@@ -41,7 +50,7 @@ export function searchCities(getFocusCity, getSurpriseFocus) {
         cuisine.type?.toLowerCase().includes(q)
       );
     }).slice(0, 8);
-    renderResults(matches);
+    renderResults(matches,true);
   });
  
   resultsBox.addEventListener('click', (e) => {
@@ -56,13 +65,13 @@ export function searchCities(getFocusCity, getSurpriseFocus) {
       }
       focusCity(city);
       input.value = '';
-      renderResults([]);
+      renderResults([],false);
     }
   });
  
   document.addEventListener('click', (e) => {
     if (!e.target.closest('#top-bar')) {
-      renderResults([]);
+      renderResults([]),false;
     }
   });
  
@@ -81,7 +90,8 @@ export function searchCities(getFocusCity, getSurpriseFocus) {
     }
     fn(randomCity);
     input.value = '';
-    renderResults([]);
+    renderResults([],false);
   });
 }
+
 
