@@ -518,6 +518,23 @@ body.mode-2d #surprise-btn{
 #start-btn:hover{
     background:#ffb733
 }
+#near-me-btn{
+    padding:8px 12px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:8px;
+    color: #7fd4ff;
+    font-size: 14px;
+    cursor:pointer;
+    white-space:nowrap;
+}
+#near-me-btn:hover{
+    background:rgba(255,255,255,0.18);
+}
+#near-me-btn:disabled{
+    opacity:0.5;
+    cursor: wait;
+}
 
 @media (max-width:480px){
     .start-char{height:90px};
@@ -589,4 +606,8 @@ body.mode-3d .start-instructions{
 body.mode-3d #start-btn{
     padding: 18px 36px;
     font-size:18px
+}
+body.mode-3d #near-me-btn{
+    padding:14px 20px;
+    font-size:17px;
 }
