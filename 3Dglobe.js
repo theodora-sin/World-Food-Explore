@@ -299,6 +299,7 @@ export function load3DGlobe() {
     box.style.top = `${top}px`;
     box.style.display = "block";
     box.setAttribute("aria-hidden", "false");
+    window.dispatchEvent(new CustomEvent('cityViewed', { detail: city }));
 
     document.getElementById("city-close").onclick = () => hideCityInfo();
 
