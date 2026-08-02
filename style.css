@@ -581,14 +581,20 @@ body.mode-2d #surprise-btn{
     z-index:1;
     pointer-events:none;
 }
-.footer-doodles{
-    font-size:14px;
-    opacity:0.6;
-    letter-spacing:4px;
-}
 .footer-credit{
     font-size:11px;
     color:#777;
+}
+.footer-chars{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    width:auto;
+    height:32px
+    opacity:0.9
+}
+.footer-char1{
+    transform: scaleX(-1);
 }
 
 @media (max-width:480px){
