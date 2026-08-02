@@ -89,7 +89,11 @@ const favPanel= document.getElementById('favorites-panel');
 function renderFavoritesList(){
     const favs= getFavoriteCities(allCities);
     if(!favs.length){
-    favPanel.innerHTML = `<div class="favorites-empty">No favorites yet — tap the ☆ on a city's card to save it.</div>`;        
+        favPanel.innerHTML = `
+          <div class="empty-state">
+            <img src="images/character4.png" class="empty-mascot" alt="">
+            <p>No favorites yet — tap the ☆ on a city's card to save it.</p>
+          </div>`;
     return;
     }
     favPanel.innerHTML = favs.map(city =>{
@@ -132,7 +136,11 @@ const historyBtn = document.getElementById('history-btn');
 function renderTimeLine(){
     if(!timelineStrip) return;
     if(!timeline.length){
-        timelineStrip.innerHTML = `<div class="timeline-empty">No cities explored yet — start tapping around!</div>`;
+        timelineStrip.innerHTML = `
+          <div class="empty-state empty-state-inline">
+            <img src="images/character3.png" class="empty-mascot-small" alt="">
+            <span>No cities explored yet — start tapping around!</span>
+          </div>`;
         return;
     }
     timelineStrip.innerHTML = timeline.map((city, i) => `
@@ -175,6 +183,7 @@ if(historyBtn && timelineStrip){
         }
     });
 }
+
 function distanceKm(lat1, lng1, lat2, lng2) {
   const R = 6371; // Earth's radius in km
   const dLat = (lat2 - lat1) * Math.PI / 180;
