@@ -710,7 +710,7 @@ body.mode-3d #search-input{
     padding: clamp(12px, 1vw, 18px) clamp(14px, 1.2vw, 20px);
 }
 body.mode-3d .footer-char{
-    height: clamp(28px, 3vw, 48px);
+    height: clamp(120px, 10vw, 220px);
 }
 body.mode-3d .footer-credit{
     font-size: clamp(11px, 0.7vw, 14px);
