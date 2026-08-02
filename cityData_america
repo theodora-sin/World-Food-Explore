@@ -63,7 +63,7 @@ export const cityData_america=[
     lng:-157.858618,
     cuisines:[{
         type:"Western",
-        dish_name:"Spam Musubi:",
+        dish_name:"Spam Musubi",
         course: "Main",
         photoURL:"images/musubi.webp",
         description:"A slice of grilled Spam on top of a block of rice, wrapped together with a strip of dry seaweed",
@@ -71,7 +71,7 @@ export const cityData_america=[
             name:"Musubi Cafe IYASUME",
             priceRange:"$",
             address:"2427 Kūhiō Ave., Honolulu, HI 96815, United States",
-            link:"google.com/maps/search/Musubi+Cafe+IYASUME/@21.292834,-157.8812776,13z?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+            link:"https://www.google.com/maps/search/Musubi+Cafe+IYASUME/@21.292834,-157.8812776,13z?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
         }]
     }]
 },
