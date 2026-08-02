@@ -2,10 +2,9 @@ import { cityData } from "./cityData.js";
 import { cityData_europe } from "./cityData_europe.js";
 import { cityData_Africa } from "./cityData_africa.js";
 import { cityData_america} from "./cityData_america.js";
-
 const allCities = [...cityData, ...cityData_europe, ...cityData_Africa, ...cityData_america];
  
-export function searchCities(getFocusCity) {
+export function searchCities(getFocusCity, getSurpriseFocus) {
   const input = document.getElementById('search-input');
   const resultsBox = document.getElementById('search-results');
   const surpriseBtn = document.getElementById('surprise-btn');
@@ -67,22 +66,6 @@ export function searchCities(getFocusCity) {
     }
   });
  
-  surpriseBtn.addEventListener('click', () => {
-    const validCities = allCities.filter(c => c.cuisines && c.cuisines[0]);
-    if (!validCities.length) return;
-    const randomCity = validCities[Math.floor(Math.random() * validCities.length)];
- 
-    const focusCity = getFocusCity();
-    if (typeof focusCity !== 'function') {
-      console.warn('focusCity is not ready yet — instance may not be initialized:', focusCity);
-      return;
-    }
-    focusCity(randomCity);
-    input.value = '';
-    renderResults([]);
-  });
-}
-export function searchCities(getFocusCity, getSurpriseFocus){
   surpriseBtn. addEventListener('click',() =>{
     const validCities = allCities.filter(c => c.cuisines&& c.cuisines[0]);
     if(!validCities.length) return;
@@ -90,8 +73,8 @@ export function searchCities(getFocusCity, getSurpriseFocus){
 
     const surpriseFocus = getSurpriseFocus ? getSurpriseFoucs() : null;
     const focusCity = getFocusCity();
-
     const fn = typeof surpriseFocus === 'function' ? surpriseFocus : focusCity;
+    
     if(typeof fn !== 'function'){
       console.warn('No focus function ready yet');
       return;
@@ -99,5 +82,5 @@ export function searchCities(getFocusCity, getSurpriseFocus){
     fn(randomCity);
     inout.value = '';
     renderResults([]);
-  })
+  });
 }
