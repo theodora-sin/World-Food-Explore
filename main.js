@@ -51,6 +51,14 @@ function showMap(){
     setHelpText();
 }
 
+const startScreen =document.getElementById('start-screen');
+const startBtn = document.getElementById('start-btn');
+if(startScreen && startBtn){
+    startBtn.addEventListener('click', () =>{
+        startScreen.classList.add('hidden');
+    });
+}
+
 function applyModeForWidth(){
     const shouldBeMobile = window.innerWidth < BREAKPOINT;
     const targetMode = shouldBeMobile ? "2d":"3d";
