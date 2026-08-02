@@ -379,4 +379,100 @@ export const cityData_america=[
         }]
     }]
 },
+{
+    name:"Buenos Aires",
+    country:"Argentina",
+    lat:-34.618746,
+    lng:-58.406985,
+    cuisines:[{
+        type:"South American",
+        dish_name:"Asado",
+        course: "Main",
+        photoURL:"images/asado.jpg",
+        description:" The cultural ritual of slow-grilled beef over wood or charcoal. Essential cuts to order include bife de chorizo (sirloin), ojo de bife (ribeye), and entraña (skirt steak).",
+        recommendations:[{
+            name:"Fogón Asado",
+            priceRange:"$$$$",
+            address:"Gorriti 3780, C1172 Cdad. Autónoma de Buenos Aires, Argentina",
+            link:"https://www.google.com/maps/place/Fog%C3%B3n+Asado/@-34.5920737,-58.4464827,14z/data=!4m10!1m2!2m1!1sfog%C3%B3n+asado+buenos+aires!3m6!1s0x95bccb67d2531041:0x10055770126fafa3!8m2!3d-34.5956729!4d-58.4182052!15sChlmb2fDs24gYXNhZG8gYnVlbm9zIGFpcmVzWhsiGWZvZ8OzbiBhc2FkbyBidWVub3MgYWlyZXOSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11shnypcky?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Montevideo",
+    country:"Uruguay",
+    lat:-34.903111,
+    lng:-56.183732,
+    cuisines:[{
+        type:"Uruguayan",
+        dish_name:"Chivito",
+        course: "Main",
+        photoURL:"images/chivito.jpg",
+        description:": Uruguay's national sandwich features a thick-cut steak, melted cheese, ham, bacon, eggs, and lettuce on a toasted bun, usually served with a large side of French fries.",
+        recommendations:[{
+            name:"Bar Tinkal",
+            priceRange:"$$$",
+            address:"Dr Emilio Frugoni 853, 15003 Montevideo, Departamento de Montevideo, Uruguay",
+            link:"https://www.google.com/maps/place/El+Tinkal/@-34.9135532,-56.1850839,15z/data=!3m1!4b1!4m6!3m5!1s0x959f81bbc4f9ac4b:0x92521da684abb6d7!8m2!3d-34.9135712!4d-56.1747842!16s%2Fg%2F1tk6rhbs?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"La Paz",
+    country:"Bolivia",
+    lat:-16.503606,
+    lng:-68.144957,
+    cuisines:[{
+        type:"Bolivian",
+        dish_name:"Salteñas",
+        course: "Breakfast",
+        photoURL:"images/saltenas.webp",
+        description:"A juicy, oven-baked braided pastry traditionally eaten in the morning, filled with beef or chicken, potatoes, spices, and a savory broth",
+        recommendations:[{
+            name:" Paceña La Salteña",
+            priceRange:"$$",
+            address:"C. 19 8024, La Paz, Bolivia",
+            link:"https://www.google.com/maps/search/+Pace%C3%B1a+La+Salte%C3%B1a+in+la+paz/@-16.5186925,-68.1889483,12z/data=!3m1!4b1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"São Paulo",
+    country:"Brazil",
+    lat:-23.610924,
+    lng:-46.644684,
+    cuisines:[{
+        type:"Brazilian",
+        dish_name:"Virado à Paulista",
+        course: "Main",
+        photoURL:"images/virado.jpg",
+        description:" A historic heavy plate of pork chops, sausage, fried banana, collard greens, fried egg, and paste-like beans mixed with cassava flour—traditionally eaten on Mondays",
+        recommendations:[{
+            name:"Salada Record",
+            priceRange:"$$",
+            address:"Av. São João, 719 - Centro Histórico de São Paulo, São Paulo - SP, 01035-100, Brazil",
+            link:"https://www.google.com/maps/place/Salada+Record/@-23.542157,-46.6511827,15z/data=!3m1!4b1!4m6!3m5!1s0x94ce58503d1775ad:0x8e24e12b325a5f4d!8m2!3d-23.542177!4d-46.640883!16s%2Fg%2F1pp2vccyj?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+{
+    name:"Asunción",
+    country:"Paraguay",
+    lat:-25.267848,
+    lng:-57.565339,
+    cuisines:[{
+        type:"Paraguayan",
+        dish_name:"Vori-vori",
+        course: "Main",
+        photoURL:"images/vori.jpg",
+        description:"A warm, thick soup made with small cornmeal and cheese dumplings, often served with chicken.",
+        recommendations:[{
+            name:"Bolsi",
+            priceRange:"$$$",
+            address:"Estrella 399 esq, Asunción 001101, Paraguay",
+            link:"https://www.google.com/maps/place/Bolsi/@-25.2821982,-57.6464895,15z/data=!3m1!4b1!4m6!3m5!1s0x945da7f3b9ce82eb:0x3ac25955658986a0!8m2!3d-25.282218!4d-57.6361898!16s%2Fg%2F1vntkzww?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+        }]
+    }]
+},
+]
 ]
