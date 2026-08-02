@@ -452,8 +452,78 @@ body.mode-2d #surprise-btn{
     padding:6px 12px;
     white-space:nowrap;
 }
+#start-screen{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.92);
+    z-index:10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+#start-screen.hidden{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+.start-content{
+    max-width:480px;
+    text-align:center;
+    color:#eee;
+}
+.start.content h1{
+    font-size:28px;
+    margin: 0 0 8px 0;
+    color:#ffa500;
+}
+.start-tagline{
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom:20px;
+}
+.start-characters{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    margin-bottom:20px;
+}
+.start-char{
+    height:140px;
+    width:auto;
+    object-fit:contain;
+}
+.start-instructions{
+    list-style:none;
+    padding:0;
+    margin: 0 0 24px 0;
+    text-align: left;
+    display: inline-block;
+}
+.start-instructions li{
+    font-size: 14px;
+    margin-bottom:10px;
+    color: #ddd;
+}
+#start-btn{
+    background: #ffa500;
+    border:none;
+    border-radius:8px;
+    padding: 14px 28px;
+    font-size:16px;
+    color: #111;
+    cursor:pointer;
+}
+#start-btn:hover{
+    background:#ffb733
+}
 
 @media (max-width:480px){
+    .start-char{height:90px};
+    .start-content h1{font-size:22px;}
+    .start-instructions li{ font-size: 13px; }
+
     #city-info.mobile-sheet{
         max-height:55vh;
         padding:12px 14px 20px 14px;
