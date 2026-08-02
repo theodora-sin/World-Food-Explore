@@ -398,6 +398,38 @@ body.mode-2d #surprise-btn{
     vertical-align:middle;
 }
 
+#timeline-strip{
+    position:fixed;
+    bottom:12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    gap: 6px;
+    max-width:90vw;
+    overflow-x: auto;
+    z-index:4000;
+    padding:6px;
+}
+.timeline.item{
+    flex-shrink:0;
+    background:rgba(0,0,0,0.75);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding:6px 12px;
+    color: #eee;
+    font-size:12px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.timeline-item:hover{
+    background: rgba(255,255,255,0.15)
+}
+.timeline-num{
+    color:#ffa500;
+    font-weight:600;
+    margin-right:4px;
+}
+
 @media (max-width:480px){
     #city-info.mobile-sheet{
         max-height:55vh;
