@@ -134,14 +134,16 @@ function renderTimeLine(){
   `).join('');
 }
 
-window.addEventListener('cityViewed', (e) => {
+window.addEventListener('cityViewed', (e) =>{
     const city = e.detail;
+
     const existingIndex = timeline.findIndex(c => c.name === city.name);
     if (existingIndex !== -1) {
-        timeline.splice(existingIndex, 1);
+        timeline.splice(existingIndex, 1); 
     }
+
     timeline.push(city);
-    if (timeline.length > TIMELINE_MAX) {
+    if(timeline.length > TIMELINE_MAX){
         timeline.shift();
     }
     renderTimeLine();
