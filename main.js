@@ -120,23 +120,22 @@ if(favBtn && favPanel){
         }
     })
 }
+const historyBtn = document.getElementById('history-btn');
 function renderTimeLine(){
     if(!timelineStrip) return;
     if(!timeline.length){
-        timelineStrip.style.display ='none';
+        timelineStrip.innerHTML = `<div class="timeline-empty">No cities explored yet — start tapping around!</div>`;
         return;
     }
-  timelineStrip.style.display = 'flex';
-  timelineStrip.innerHTML = timeline.map((city, i) => `
-    <button class="timeline-item" data-index="${i}">
-      <span class="timeline-num">${i + 1}</span> ${city.name}
-    </button>
-  `).join('');
+    timelineStrip.innerHTML = timeline.map((city, i) => `
+      <button class="timeline-item" data-index="${i}">
+        <span class="timeline-num">${i + 1}</span> ${city.name}
+      </button>
+    `).join('');
 }
 
 window.addEventListener('cityViewed', (e) =>{
     const city = e.detail;
-
     const existingIndex = timeline.findIndex(c => c.name === city.name);
     if (existingIndex !== -1) {
         timeline.splice(existingIndex, 1); 
@@ -149,12 +148,22 @@ window.addEventListener('cityViewed', (e) =>{
     renderTimeLine();
 });
 
-if(timelineStrip){
+if(historyBtn && timelineStrip){
+    historyBtn.addEventListener('click',(e) =>{
+        e.stopPropagation();
+        timelineStrip.classList.toggle('open');
+    });
     timelineStrip.addEventListener('click', (e) =>{
         const btn = e.target.closest('.timeline-item');
         if(!btn) return;
         const city = timeline[+btn.dataset.index];
         const focusCity= mode ==="2d" ? mapInstance?.focusCity : globeInstance?.focusCity;
         if(typeof focusCity === 'function') focusCity(city);
+        timelineStrip.classList.remove('open');
+    });
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('#history-btn') && !e.target.closest('#timeline-strip')) {
+            timelineStrip.classList.remove('open');
+        }
     });
 }
