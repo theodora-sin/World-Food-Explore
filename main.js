@@ -8,8 +8,11 @@ import { cityData_Africa } from "./cityData_africa.js";
 import { cityData_america} from "./cityData_america.js";
 
 const allCities = [...cityData, ...cityData_europe, ...cityData_Africa, ...cityData_america];
-
 const BREAKPOINT=768;
+const TIMELINE_MAX =10;
+const timeline=[];
+const timelineStrip = document.getElementById('timeline-strip');
+
 let mode = null;
 let globeInstance = null;
 let mapInstance = null;
@@ -116,4 +119,37 @@ if(favBtn && favPanel){
         favPanel.style.display = 'none';
         }
     })
+}
+function renderTimeLine(){
+    if(!timelineStrip) return;
+    if(!timeline.length){
+        timelineStrip.style.display ='none';
+        return;
+    }
+  timelineStrip.style.display = 'flex';
+  timelineStrip.innerHTML = timeline.map((city, i) => `
+    <button class="timeline-item" data-index="${i}">
+      <span class="timeline-num">${i + 1}</span> ${city.name}
+    </button>
+  `).join('');
+}
+
+window.addEventListener('cityViewed', (e) =>{
+    const city = e.detail;
+    if(timeline[timeline.length - 1]?.name === city.name) return;
+    timeline.push(city);
+    if(timeline.length > TIMELINE_MAX){
+        timeline.shift();
+    }
+    renderTimeLine();
+});
+
+if(timelineStrip){
+    timelineStrip.addEventListener('click', (e) =>{
+        const btn = e.target.closet('.timeline-item');
+        if(!btn) return;
+        const city = timeline[+btn.dataset.index];
+        const focusCity= mode ==="2d" ? mapInstance?.focusCity : globeInstance?.focusCity;
+        if(typeof focusCity === 'function') focusCity(city);
+    });
 }
