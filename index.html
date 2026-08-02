@@ -11,6 +11,28 @@
     <link rel="icon" type="image/png" href="images/favicon_food.png"/>
   </head>
 <body>
+<div id="start-screen">
+  <div class="start-content">
+    <h1>World Food Explorer</h1>
+    <p class="start-tagline">Spin the globe. Discover a dish. Find where to eat it.</p>
+
+    <div class="start-characters">
+      <img src="images/character1.png" alt="Guide character 1" class="start-char">
+      <img src="images/character2.png" alt="Guide character 2" class="start-char">
+    </div>
+
+    <ul class="start-instructions">
+      <li>🌍 <strong>Spin the globe</strong> (or pan the map on mobile) to explore</li>
+      <li>📍 <strong>Tap a city</strong> to see its signature dish and where to try it</li>
+      <li>🔍 <strong>Search</strong> by city, dish, or cuisine</li>
+      <li>🎲 <strong>Surprise Me</strong> for a random destination</li>
+      <li>★ <strong>Save favorites</strong> to revisit later</li>
+    </ul>
+
+    <button id="start-btn">Start Exploring →</button>
+  </div>
+</div>
+
     <div id="label-layer" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:5;"></div>
     <svg id="label-lines" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:4;"></svg>
     <div id="globeWrap">
@@ -36,7 +58,7 @@
 </div>
 <div id="timeline-strip"></div>
 <button id ='history-btn' aria-label= "View history">🕘</button>
-    
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script type="module" src="./main.js"></script>
