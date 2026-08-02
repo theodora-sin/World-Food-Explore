@@ -1,11 +1,12 @@
-World Food Explorer🌍🍜
+## World Food Explorer🌍🍜
 An easy-to-use interactive world food finder:
 Spin the globe 3D on desktop and zoom into the map 2D on mobile; select any city, and a food tab will appear showing recommended authentic food and a restaurant.
 
 
-Live demo: https://theodora-sin.github.io/World-Food-Explore/
+## Live demo:
+https://theodora-sin.github.io/World-Food-Explore/
 
-Features:
+## Features:
 🌍 3D globe (on desktop) / 2D map (on mobile) — adjusts automatically depending on screen width
 📍 Click any city to view its food card — photo, description, cuisine, course of the meal, and a suggested restaurant with its address and link to Google Maps
 🔍 Search by city name, country, dish name, or cuisine type
@@ -16,10 +17,8 @@ Features:
 👋 Start page with instructions and character icons, appears only on first load of the page
 
 
-Data Structure:
+## Data Structure:
 Each city in the dataset follow this shape:
-
-
 cityName
 country
 latitude
@@ -34,16 +33,15 @@ priceRange ($, $$, $$$)
 address
 hyperlink to Google Maps
 
-Tech Stack:
+## Tech Stack:
 globe.gl – renders the 3D globe (based on Three.js)
 Leaflet.js  – renders the 2D map and clusters the markers
 CARTO Dark Matter tiles – theme for the dark map that matches the look of the 3D globe
 localStorage – saves the favourites between visits
 Browser Geolocation API – allows for the use of the Near Me function
 No backend, no database, no build system – all static content served from GitHub Pages.
-Project structure
 
-
+## Project structure
 
 ├── index.html            # markup + UI containers for all features
 ├── style.css             # styles for all components, including modes (2D, 3D)
