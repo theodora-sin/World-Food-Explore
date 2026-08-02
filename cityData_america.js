@@ -475,4 +475,3 @@ export const cityData_america=[
     }]
 },
 ]
-]
