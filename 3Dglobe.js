@@ -334,6 +334,18 @@ export function load3DGlobe() {
     myGlobe.pointOfView({ lat: city.lat, lng: city.lng, altitude: 1.5 }, 700);
     setTimeout(() => showCityInfo(city), 650);
   }
-
+  
+  function surpriseFocus(city){
+    if(controls) controls.autoRotateSpeed =2;
+    const SPIN_DURATION = 1200;
+    const FLY_DURATION =1200;
+    setTimeout(() =>{
+      myGlobe.pointOfView({lat: city.lat, lng: city.lng, altitude:1.5}, FLY_DURATION);
+      setTimeout(() =>{
+        if(controls) controls.autoRotateSpeed = 1;
+        showCityInfo(city);
+      }, FLY_DURATION -50);
+    }, SPIN_DURATION);
+  }
   return { globe: myGlobe, focusCity };
 }
