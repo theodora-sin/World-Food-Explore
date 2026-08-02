@@ -56,3 +56,6 @@ No backend, no database, no build system – all static content served from GitH
 ├── cityData_Africa.js     # city data from Africa
 ├── cityData_america.js    # city data from America
 └── images                 # dish photo, favicon, character
+
+## AI Usage
+I mainly used AI to debug the code and as a learning aid throughout the development of this project. It also helped me to use users' views to understand what experience users want. The whole concept, design idea and features were all my own creations.
