@@ -283,7 +283,7 @@ export function load3DGlobe() {
 
     const padding = 12;
     const boxWidth = 420;
-    const boxHeight = 420;
+    const boxHeight = window.innerHeight * 0.8;
     let left = coords.x + 18;
     let top = coords.y - 20;
 
