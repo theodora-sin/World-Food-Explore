@@ -1,4 +1,4 @@
-## World Food Explorer🌍🍜
+## World Food Explorer🌍
 An easy-to-use interactive world food finder where you can explore the world wide cuisine.
 
 Spin the globe 3D on desktop or zoom into the map 2D on mobile; select any city, and a food tab will appear showing recommended authentic food and a recommended restaurant.
