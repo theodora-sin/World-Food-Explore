@@ -241,7 +241,8 @@ export function load3DGlobe() {
   function showCityInfo(city) {
     const box = document.getElementById('city-info');
     const cuisine = city.cuisines[0];
-    const favActive = isFavorite(city); // ← ADDED
+    const favActive = isFavorite(city); 
+   if (controls) controls.autoRotate = false;
     box.innerHTML = `
       <button id="city-close" aria-label="Close">✕</button>
       <button id="city-favorite" aria-label="Toggle favorite" class="${favActive ? 'active' : ''}">${favActive ? '★' : '☆'}</button>
