@@ -13,14 +13,15 @@ https://theodora-sin.github.io/World-Food-Explore/
 
 ## Features:
 ### 🌍 3D globe (on desktop) / 2D map with dark background (on mobile) — adjusts automatically depending on screen width
-###  📍🗺️ Click any city to view its food card — photo, description of the meal, cuisine, course of the meal, and a suggested restaurant with its address and link to Google Maps
+###  📍🗺️ Click any city to view its food card — photo, description of the meal, cuisine, course of the meal, and a suggested restaurant with its Google Map address link. 
 ### 🔍 Search by city name, country, dish name, or cuisine type
-### 🎲 Surprise Me — takes you to a city with a really cool effect. The effect is like a spin and land and takes you to a city. (*It is only available on 3D globe)
+### 🎲 Surprise Me — takes you to a city with a really cool effect. The effect is like a spin and land and takes you to a city. (*It is only available on 3D globe*)
 ### 📍 Near Me —  using Geoglocation API to know your location and recommended your the nearest city 
 ### ★ Favourites — allows you to mark your favourite cities and visit them later; saves them locally in the browser
 ### 🕘 History — records the last 10 cities visited during the current session
 ###  Start page with instructions and character icons, appears on first load of the screen
 ### with 2 characters icon on the footer in 3D globe screen 
+### Favicon picture is designed by me.
 ### No backend, no database, no build in system. Using Static server to deploy.
 
 
@@ -30,11 +31,11 @@ https://theodora-sin.github.io/World-Food-Explore/
 ### country
 ### latitude
 ### longitude
-### Type of Cuisine (Chinese, Western, Italian, etc.)
+### Type of Cuisine
 ### dish_name
 ### course (e.g. Main,Dessert, Brunch,Breakfast)
-### A photo of the famous dish
-### A short description of the famous dish
+### A photo of the authetic dish
+### A short description of the authetic dish
 ### Name of the restaurant which served this dish
 ### priceRange ($, $$, $$$)
 ### address
