@@ -27,7 +27,7 @@ https://theodora-sin.github.io/World-Food-Explore/
 
 ## Food card Structure:
 ### Each city include these data: 
-### cityName, country, latitude, longitude, Type of Cuisine, dish_name, course (e.g. Main,Dessert, Brunch,Breakfast), A photo of the authetic dish, A short description of the authetic dish, Name of the restaurant which served this dish, priceRange ($, $$, $$$), address, hyperlink to Google Maps, 
+cityName, country, latitude, longitude, Type of Cuisine, dish_name, course (e.g. Main,Dessert, Brunch,Breakfast), A photo of the authetic dish, A short description of the authetic dish, Name of the restaurant which served this dish, priceRange ($, $$, $$$), address, hyperlink to Google Maps, 
 
 ## Built with: 
 static JS, CSS, HTML, leaftlet.js, globe.gl.
