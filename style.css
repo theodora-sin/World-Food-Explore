@@ -589,18 +589,19 @@ body.mode-2d #near-me-btn{
     bottom:40px;
     left:90px;
     transform: none;
-    z-index:4500;
+    z-index:5200;   
 }
 
 @media (max-width:480px){
     body.mode-2d #top-bar{
         left:12px;
         top:12px;
-        right:56px;
+        right:104px;   
         gap:6px;
     }
     body.mode-2d #search-input{
-        width:100%;
+        flex: 1 1 auto;   
+        width: auto;
         min-width:0;
         font-size:14px;
         padding:8px 10px;
@@ -619,6 +620,7 @@ body.mode-2d #near-me-btn{
         transform:none;
         padding:6px 10px;
         font-size:12px;
+        z-index:5200;   
     }
     .start-char{height:90px;}
     .start-content h1{font-size:22px;}
