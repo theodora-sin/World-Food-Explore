@@ -41,6 +41,8 @@ https://theodora-sin.github.io/World-Food-Explore/
 ### address
 ### hyperlink to Google Maps
 
+## Built with: 
+static JS, CSS, HTML 
 
 ## AI Usage
 I mainly used AI to debug the code and as a learning aid throughout the development of this project. It also helped me to use users' views to understand what experience users want. The whole concept, design idea and features were all my own creations.
