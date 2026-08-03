@@ -101,7 +101,7 @@ html,body{
     position:fixed;
     top:24px;
     left:24px;
-    z-index:5000;
+    z-index:5300;
     display:flex;
     gap:10px;
 }
