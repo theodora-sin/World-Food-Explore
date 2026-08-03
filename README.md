@@ -12,7 +12,7 @@ Spin the globe 3D on desktop or zoom into the map 2D on mobile; select any city,
 https://theodora-sin.github.io/World-Food-Explore/
 
 ## Features:
-### 🌍 3D globe (on desktop) / 2D map with dark background (on mobile) — adjusts automatically depending on screen width
+### 3D globe (on desktop) / 2D map with dark background (on mobile) — adjusts automatically depending on screen width
 ###  📍🗺️ Click any city to view its food card — photo, description of the meal, cuisine, course of the meal, and a suggested restaurant with its Google Map address link. 
 ### 🔍 Search by city name, country, dish name, or cuisine type
 ### 🎲 Surprise Me — takes you to a city with a really cool effect. The effect is like a spin and land and takes you to a city. (*It is only available on 3D globe*)
