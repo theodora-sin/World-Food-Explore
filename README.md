@@ -17,29 +17,17 @@ https://theodora-sin.github.io/World-Food-Explore/
 ### 🔍 Search by city name, country, dish name, or cuisine type
 ### 🎲 Surprise Me — takes you to a city with a really cool effect. The effect is like a spin and land and takes you to a city. (*It is only available on 3D globe*)
 ### 📍 Near Me —  using Geoglocation API to know your location and recommended your the nearest city 
-### ★ Favourites — allows you to mark your favourite cities and visit them later; saves them locally in the browser (2D map still working on)
-### 🕘 History — records the last 10 cities visited during the current session
-###  Start page with instructions and character icons, appears on first load of the screen
-### with 2 characters icon on the footer in 3D globe screen 
+### ★ Favourites — allows you to mark your favourite cities and visit them later; saves them locally in the browser 
+### 🕘 History — records the last 10 cities visited during the current session (2D version still working on)
+###  Start screen with instructions and character icons, appears on first load of the screen
+### with 2 characters icon design by me on the footer in 3D globe screen 
 ### Favicon picture is designed by me.
 ### No backend, no database, no build in system. Using Static server to deploy.
 
 
 ## Food card Structure:
-### Each city in the dataset follow this shape:
-### cityName
-### country
-### latitude
-### longitude
-### Type of Cuisine
-### dish_name
-### course (e.g. Main,Dessert, Brunch,Breakfast)
-### A photo of the authetic dish
-### A short description of the authetic dish
-### Name of the restaurant which served this dish
-### priceRange ($, $$, $$$)
-### address
-### hyperlink to Google Maps
+### Each city include these data: 
+### cityName, country, latitude, longitude, Type of Cuisine, dish_name, course (e.g. Main,Dessert, Brunch,Breakfast), A photo of the authetic dish, A short description of the authetic dish, Name of the restaurant which served this dish, priceRange ($, $$, $$$), address, hyperlink to Google Maps, 
 
 ## Built with: 
 static JS, CSS, HTML, leaftlet.js, globe.gl.
