@@ -3,11 +3,12 @@ import { cityData } from "./cityData.js";
 import { cityData_europe } from "./cityData_europe.js";
 import { cityData_Africa } from "./cityData_africa.js";
 import { isFavorite, toggleFavorite } from "./favorites.js";
-import { cityData_america} from "./cityData_america.js";
+import { cityData_america } from "./cityData_america.js";
 const allCities = [...cityData, ...cityData_europe, ...cityData_Africa, ...cityData_america];
 
 export function load3DGlobe() {
   let hoveredCity = null;
+  let currentHideCityInfo = null; // lets the Escape-key handler close whichever card is currently open
   const globeElement = document.getElementById("globeViz");
 
   const myGlobe = Globe()
@@ -241,8 +242,10 @@ export function load3DGlobe() {
   function showCityInfo(city) {
     const box = document.getElementById('city-info');
     const cuisine = city.cuisines[0];
-    const favActive = isFavorite(city); 
-   if (controls) controls.autoRotate = false;
+    const favActive = isFavorite(city);
+
+    if (controls) controls.autoRotate = false; 
+
     box.innerHTML = `
       <button id="city-close" aria-label="Close">✕</button>
       <button id="city-favorite" aria-label="Toggle favorite" class="${favActive ? 'active' : ''}">${favActive ? '★' : '☆'}</button>
@@ -304,7 +307,6 @@ export function load3DGlobe() {
 
     document.getElementById("city-close").onclick = () => hideCityInfo();
 
-
     const favBtn = document.getElementById("city-favorite");
     if (favBtn) {
       favBtn.onclick = (e) => {
@@ -322,14 +324,17 @@ export function load3DGlobe() {
       box.style.display = "none";
       box.setAttribute("aria-hidden", "true");
       window.removeEventListener("click", onWindowClick);
+      if (controls) controls.autoRotate = true; 
+      currentHideCityInfo = null;
     }
+    currentHideCityInfo = hideCityInfo; 
+
     setTimeout(() => window.addEventListener("click", onWindowClick), 0);
   }
 
   window.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
-      const box = document.getElementById("city-info");
-      if (box) { box.style.display = 'none'; box.setAttribute('aria-hidden', 'true'); }
+    if (e.key === "Escape" && currentHideCityInfo) {
+      currentHideCityInfo(); 
     }
   });
 
@@ -337,18 +342,19 @@ export function load3DGlobe() {
     myGlobe.pointOfView({ lat: city.lat, lng: city.lng, altitude: 1.5 }, 700);
     setTimeout(() => showCityInfo(city), 650);
   }
-  
-  function surpriseFocus(city){
-    if(controls) controls.autoRotateSpeed =2;
+
+  function surpriseFocus(city) {
+    if (controls) controls.autoRotateSpeed = 2;
     const SPIN_DURATION = 1200;
-    const FLY_DURATION =1200;
-    setTimeout(() =>{
-      myGlobe.pointOfView({lat: city.lat, lng: city.lng, altitude:1.5}, FLY_DURATION);
-      setTimeout(() =>{
-        if(controls) controls.autoRotateSpeed = 1;
+    const FLY_DURATION = 1200;
+    setTimeout(() => {
+      myGlobe.pointOfView({ lat: city.lat, lng: city.lng, altitude: 1.5 }, FLY_DURATION);
+      setTimeout(() => {
+        if (controls) controls.autoRotateSpeed = 1;
         showCityInfo(city);
-      }, FLY_DURATION -50);
+      }, FLY_DURATION - 50);
     }, SPIN_DURATION);
   }
-  return { globe: myGlobe, focusCity };
+
+  return { globe: myGlobe, focusCity, surpriseFocus };
 }
