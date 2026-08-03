@@ -17,7 +17,7 @@ https://theodora-sin.github.io/World-Food-Explore/
 ### 🔍 Search by city name, country, dish name, or cuisine type
 ### 🎲 Surprise Me — takes you to a city with a really cool effect. The effect is like a spin and land and takes you to a city. (*It is only available on 3D globe*)
 ### 📍 Near Me —  using Geoglocation API to know your location and recommended your the nearest city 
-### ★ Favourites — allows you to mark your favourite cities and visit them later; saves them locally in the browser
+### ★ Favourites — allows you to mark your favourite cities and visit them later; saves them locally in the browser (2D map still working on)
 ### 🕘 History — records the last 10 cities visited during the current session
 ###  Start page with instructions and character icons, appears on first load of the screen
 ### with 2 characters icon on the footer in 3D globe screen 
