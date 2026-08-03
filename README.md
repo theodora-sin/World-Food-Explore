@@ -3,6 +3,10 @@ An easy-to-use interactive world food finder where you can explore the world wid
 
 Spin the globe 3D on desktop or zoom into the map 2D on mobile; select any city, and a food tab will appear showing recommended authentic food and a recommended restaurant.
 
+## Idea:
+### I really miss the time when I was travelling around the world. I love to explore food in each places. This summer I am not feeling well enough to travel around the world.
+### I made this website because I want to remember the food I had in different cities, explore new authentic food in different cities and I want to share this with other people who love food like me, This website allow you to explore the authetic food experience through using food card.
+### The best thing about this website is the surprise me feature. It picks a place for you to go. You don't know where you are going next. I like the surprise me feature because it lets me see diffetent cities with their authentic food. It is fun to play and learning many new information 
 
 ## Live demo:
 https://theodora-sin.github.io/World-Food-Explore/
