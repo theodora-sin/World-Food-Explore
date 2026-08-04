@@ -30,8 +30,8 @@ export function load2DMap() {
     nearBtn.style.left = '${rect.right + 12}px';
     nearBtn.style.bottom =`${window.innerHeight - rect.bottom}px`;
   }
-  setTimeout(alignNearmeButton, 150);
-  window.addEventListener ('resize', alignNearmeButton)
+  setTimeout(alignNearMeButton, 150);
+  window.addEventListener ('resize', alignNearMeButton)
  
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 20,
