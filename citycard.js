@@ -44,7 +44,8 @@ export function wireCityCardClose(box, city) {
     window.removeEventListener("click", box._outsideClickHandler);
     box._outsideClickHandler = null;
   }
-
+  const nearBtn= document.getElementById('near-me-btn');
+  if(nearBtn) nearBtn.style.display='none';
   document.getElementById("city-close").onclick = () => hide();
 
   const favBtn = document.getElementById("city-favorite");
@@ -66,6 +67,7 @@ export function wireCityCardClose(box, city) {
     box.setAttribute("aria-hidden", "true");
     window.removeEventListener("click", onWindowClick);
     box._outsideClickHandler = null;
+    if(nearBtn)nearBtn.style.display ='';
   }
 
   box._outsideClickHandler = onWindowClick;
@@ -79,7 +81,7 @@ export function wireCityCardClose(box, city) {
 
       const onTouchStart = (e) => {
         startY = e.touches[0].clientY;
-        box.style.transition = 'none'; // track finger directly while dragging
+        box.style.transition = 'none'; 
       };
       const onTouchMove = (e) => {
         if (startY === null) return;
