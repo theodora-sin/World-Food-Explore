@@ -5,7 +5,6 @@ import { renderCityCardHTML, wireCityCardClose } from "./citycard.js";
 import { cityData_america} from "./cityData_america.js";
 const allCities = [...cityData, ...cityData_europe, ...cityData_Africa, ...cityData_america];
 
-
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
@@ -20,6 +19,19 @@ export function load2DMap() {
     zoomControl:false,
   }).setView([20, 100], 3);
   L.control.zoom({position: 'bottomleft'}).addTo(map);
+  function alignNearMeButton (){
+    const zoomE1= document.querySelector('.leaflet-control-zoom');
+    const nearBtn= document.getElementById('near-me-btn');
+    if(!zoomE1 || !nearBtn) return;
+    const rect=zoomE1.getBoundingClientRect();
+    nearBtn.style.position="fixed";
+    nearBtn.style.top = "auto";
+    nearBtn.style.transform ='none';
+    nearBtn.style.left = '${rect.right + 12}px';
+    nearBtn.style.bottom =`${window.innerHeight - rect.bottom}px`;
+  }
+  setTimeout(alignNearmeButton, 150);
+  window.addEventListener ('resize', alignNearmeButton)
  
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 20,
