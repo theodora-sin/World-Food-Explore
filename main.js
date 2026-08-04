@@ -164,6 +164,12 @@ window.addEventListener('cityViewed', (e) =>{
     renderTimeLine();
 });
 
+function setNearMeVisible(visible){
+    if(mode!== '2d') return;
+    const nearBtn = document.getElementById('near-me-btn');
+    if(nearBtn) nearBtn.style.display = visible? '': 'none';
+}
+
 if(historyBtn && timelineStrip){
     historyBtn.addEventListener('click',(e) =>{
         e.stopPropagation();
