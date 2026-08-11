@@ -17,6 +17,14 @@ let mode = null;
 let globeInstance = null;
 let mapInstance = null;
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(() => console.log('Service worker registered'))
+      .catch((err) => console.warn('Service worker registration failed:', err));
+  });
+}
+
 function setHelpText(){
     document.getElementById('info-box').textContent =
     "Spin the globe/Pan the map → Tap a city → Discover local food."
