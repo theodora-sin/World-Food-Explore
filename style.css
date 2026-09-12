@@ -79,9 +79,6 @@ html,body{
     z-index:5000;
     overflow-y:auto;
     box-sizing:border-box;
-    opacity:0;
-    transform:translateY(var(--sp--md));
-    transition: opacity var(--trans-med);
 }
 #city-info.visible{
     opacity:1;
