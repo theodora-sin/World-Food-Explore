@@ -351,6 +351,8 @@ body.mode-2d #surprise-btn{
 }
 #city-close{
     position:absolute;
+    top:8px;
+    right:8px; 
     height:var(--xxl);
     width:var(--xxl);
     align-items:center;
