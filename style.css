@@ -30,6 +30,7 @@ html,body{
 }
 /*globe*/
 #globeWrap{
+    position:fixed;
     width:100vw;
     height:100vh;
     display:flex;
@@ -44,6 +45,8 @@ html,body{
 }
  
 #map{
+    position:fixed;
+    display:none;
     width:100vw;
     height:100vh;
 }
@@ -64,6 +67,7 @@ html,body{
  
 #city-info{
     position:absolute;
+    display:none;
     min-width:360px;
     max-width:420px;
     max-height:80vh;
@@ -417,6 +421,7 @@ body.mode-2d #surprise-btn{
 }
 #timeline-strip{
     position:fixed;
+    display:none;
     bottom:12px;
     left: 50%;
     transform: translateX(-50%);
