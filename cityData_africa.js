@@ -189,4 +189,196 @@ export const cityData_Africa=[
         }]
     }]
 },
+{
+    name:"Addis Ababa",
+    country:"Ethiopia",
+    lat:9.0300,
+    lng:38.7400,
+    cuisines:[{
+        type:"Ethiopian",
+        dish_name:"Doro Wat",
+        course:"Main",
+        photoURL:"images/doro_wat.jpg",
+        description:"A rich, spicy chicken stew simmered with berbere spice and served with soft injera.",
+        recommendations:[{
+            name:"Yod Abyssinia",
+            priceRange:"$$",
+            address:"Bole Medhanealem, Addis Ababa, Ethiopia",
+            link:"https://www.google.com/maps/place/Yod+Abyssinia+Traditional+Restaurant/"
+        }]
+    }]
+},
+{
+    name:"Accra",
+    country:"Ghana",
+    lat:5.6037,
+    lng:-0.1870,
+    cuisines:[{
+        type:"Ghanaian",
+        dish_name:"Waakye",
+        course:"Main",
+        photoURL:"images/waakye.jpg",
+        description:"A beloved rice-and-beans dish cooked with millet leaves, served with stew, spaghetti, egg, and fried plantain.",
+        recommendations:[{
+            name:"Waakye Joint (Osu)",
+            priceRange:"$",
+            address:"Osu, Accra, Ghana",
+            link:"https://www.google.com/maps/search/Waakye+Osu/"
+        }]
+    }]
+},
+{
+    name:"Dakar",
+    country:"Senegal",
+    lat:14.7167,
+    lng:-17.4677,
+    cuisines:[{
+        type:"Senegalese",
+        dish_name:"Thieboudienne",
+        course:"Main",
+        photoURL:"images/thieboudienne.jpg",
+        description:"Senegal’s national dish: fragrant rice cooked in tomato broth with fish, cassava, carrots, and cabbage.",
+        recommendations:[{
+            name:"Chez Loutcha",
+            priceRange:"$$",
+            address:"19 Rue Mermoz, Dakar, Senegal",
+            link:"https://www.google.com/maps/place/Chez+Loutcha/"
+        }]
+    }]
+},
+{
+    name:"Kigali",
+    country:"Rwanda",
+    lat:-1.9441,
+    lng:30.0619,
+    cuisines:[{
+        type:"Rwandan",
+        dish_name:"Isombe",
+        course:"Main",
+        photoURL:"images/isombe.jpg",
+        description:"Mashed cassava leaves cooked with peanut butter and served with plantains or rice.",
+        recommendations:[{
+            name:"The Hut",
+            priceRange:"$$",
+            address:"KG 541 St, Kigali, Rwanda",
+            link:"https://www.google.com/maps/place/The+Hut+Restaurant/"
+        }]
+    }]
+},
+{
+    name:"Dar es Salaam",
+    country:"Tanzania",
+    lat:-6.7924,
+    lng:39.2083,
+    cuisines:[{
+        type:"Tanzanian",
+        dish_name:"Ugali & Sukuma Wiki",
+        course:"Main",
+        photoURL:"images/ugali_sukuma.jpg",
+        description:"A staple East African meal of maize porridge served with sautéed collard greens.",
+        recommendations:[{
+            name:"Mamboz Corner BBQ",
+            priceRange:"$",
+            address:"Morogoro Rd, Dar es Salaam, Tanzania",
+            link:"https://www.google.com/maps/place/Mamboz+Corner+BBQ/"
+        }]
+    }]
+},
+{
+    name:"Lusaka",
+    country:"Zambia",
+    lat:-15.3875,
+    lng:28.3228,
+    cuisines:[{
+        type:"Zambian",
+        dish_name:"Nshima",
+        course:"Main",
+        photoURL:"images/nshima.jpg",
+        description:"A thick maize porridge served with beef, chicken, or fish stew and leafy greens.",
+        recommendations:[{
+            name:"Manda Hill Food Court",
+            priceRange:"$",
+            address:"Great East Rd, Lusaka, Zambia",
+            link:"https://www.google.com/maps/place/Manda+Hill/"
+        }]
+    }]
+},
+{
+    name:"Maputo",
+    country:"Mozambique",
+    lat:-25.9653,
+    lng:32.5892,
+    cuisines:[{
+        type:"Mozambican",
+        dish_name:"Piri-Piri Chicken",
+        course:"Main",
+        photoURL:"images/piri_piri.jpg",
+        description:"Grilled chicken marinated in spicy piri-piri sauce, a Mozambican-Portuguese classic.",
+        recommendations:[{
+            name:"Campo di Mare",
+            priceRange:"$$",
+            address:"Av. Marginal, Maputo, Mozambique",
+            link:"https://www.google.com/maps/place/Campo+di+Mare/"
+        }]
+    }]
+},
+{
+    name:"Gaborone",
+    country:"Botswana",
+    lat:-24.6282,
+    lng:25.9231,
+    cuisines:[{
+        type:"Botswanan",
+        dish_name:"Seswaa",
+        course:"Main",
+        photoURL:"images/seswaa.jpg",
+        description:"Slow-cooked, shredded beef served with pap and morogo (wild spinach).",
+        recommendations:[{
+            name:"Sanitas Tea Garden",
+            priceRange:"$$",
+            address:"Gaborone, Botswana",
+            link:"https://www.google.com/maps/place/Sanitas+Tea+Garden/"
+        }]
+    }]
+},
+{
+    name:"Bamako",
+    country:"Mali",
+    lat:12.6392,
+    lng:-8.0029,
+    cuisines:[{
+        type:"Malian",
+        dish_name:"Tiguadege Na",
+        course:"Main",
+        photoURL:"images/tiguadege.jpg",
+        description:"A rich peanut stew made with beef or lamb, served with rice.",
+        recommendations:[{
+            name:"Restaurant Le Campagnard",
+            priceRange:"$$",
+            address:"Bamako, Mali",
+            link:"https://www.google.com/maps/place/Le+Campagnard/"
+        }]
+    }]
+},
+{
+    name:"Freetown",
+    country:"Sierra Leone",
+    lat:8.4657,
+    lng:-13.2317,
+    cuisines:[{
+        type:"Sierra Leonean",
+        dish_name:"Groundnut Stew",
+        course:"Main",
+        photoURL:"images/groundnut_stew.jpg",
+        description:"A creamy peanut-based stew cooked with chicken, tomatoes, and spices.",
+        recommendations:[{
+            name:"Tessa’s Restaurant",
+            priceRange:"$$",
+            address:"Lumley Beach Rd, Freetown, Sierra Leone",
+            link:"https://www.google.com/maps/place/Tessa's+Restaurant/"
+        }]
+    }]
+},
 ]
+
+
